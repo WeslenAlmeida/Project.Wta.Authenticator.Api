@@ -49,9 +49,7 @@ namespace Domain.Commands.v1
 
             var token = CreateToken(identity, createDate, expirationDate);
 
-            
-
-            
+            return SuccessObject(token);
         }
 
         private string CreateToken(ClaimsIdentity claimsIdentity, DateTime createDate, DateTime expirationDate)
