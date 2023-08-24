@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/workspace/Project.Wta.Authenticator.Api/src/Domain/Projetc.Wta.Authenticator.Domain/Projetc.Wta.Authenticator.Domain.csproj": {}
+    "/home/workspace/Project.Wta.Authenticator.Api/src/Domain/Projetc.Wta.Authenticator.Domain.csproj": {}
   },
   "projects": {
-    "/home/workspace/Project.Wta.Authenticator.Api/src/Domain/Projetc.Wta.Authenticator.Domain/Projetc.Wta.Authenticator.Domain.csproj": {
+    "/home/workspace/Project.Wta.Authenticator.Api/src/Domain/Projetc.Wta.Authenticator.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/workspace/Project.Wta.Authenticator.Api/src/Domain/Projetc.Wta.Authenticator.Domain/Projetc.Wta.Authenticator.Domain.csproj",
+        "projectUniqueName": "/home/workspace/Project.Wta.Authenticator.Api/src/Domain/Projetc.Wta.Authenticator.Domain.csproj",
         "projectName": "Projetc.Wta.Authenticator.Domain",
-        "projectPath": "/home/workspace/Project.Wta.Authenticator.Api/src/Domain/Projetc.Wta.Authenticator.Domain/Projetc.Wta.Authenticator.Domain.csproj",
+        "projectPath": "/home/workspace/Project.Wta.Authenticator.Api/src/Domain/Projetc.Wta.Authenticator.Domain.csproj",
         "packagesPath": "/home/weslen/.nuget/packages/",
-        "outputPath": "/home/workspace/Project.Wta.Authenticator.Api/src/Domain/Projetc.Wta.Authenticator.Domain/obj/",
+        "outputPath": "/home/workspace/Project.Wta.Authenticator.Api/src/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/weslen/.nuget/NuGet/NuGet.Config"
@@ -37,6 +37,20 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.1.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.32.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -1,8 +1,37 @@
 {
   "version": 2,
-  "dgSpecHash": "BdnlH68oCzOrS7Wwfxq8/SGiE6LxZ0cEdfnDx2Kkp2gVk9Bn4uKpj43W8DNeAuwAQlF7pv+X3hacKpkED5Zc5A==",
+  "dgSpecHash": "1NMOJSxdtgeASov/jzhUtCfrPLIOWfNdVlwYwzKUZmPnuiNZ70kfcQ/5m+wWntzNjvaNSy8xy34t9y7W58vxhQ==",
   "success": true,
-  "projectFilePath": "/home/workspace/Project.Wta.Authenticator.Api/src/Domain/Projetc.Wta.Authenticator.Domain/Projetc.Wta.Authenticator.Domain.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "projectFilePath": "/home/workspace/Project.Wta.Authenticator.Api/src/Domain/Projetc.Wta.Authenticator.Domain.csproj",
+  "expectedPackageFiles": [
+    "/home/weslen/.nuget/packages/mediatr/12.1.1/mediatr.12.1.1.nupkg.sha512",
+    "/home/weslen/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
+    "/home/weslen/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/11.1.0/mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
+    "/home/weslen/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
+    "/home/weslen/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "/home/weslen/.nuget/packages/microsoft.identitymodel.abstractions/6.32.1/microsoft.identitymodel.abstractions.6.32.1.nupkg.sha512",
+    "/home/weslen/.nuget/packages/microsoft.identitymodel.jsonwebtokens/6.32.1/microsoft.identitymodel.jsonwebtokens.6.32.1.nupkg.sha512",
+    "/home/weslen/.nuget/packages/microsoft.identitymodel.logging/6.32.1/microsoft.identitymodel.logging.6.32.1.nupkg.sha512",
+    "/home/weslen/.nuget/packages/microsoft.identitymodel.tokens/6.32.1/microsoft.identitymodel.tokens.6.32.1.nupkg.sha512",
+    "/home/weslen/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/home/weslen/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "/home/weslen/.nuget/packages/system.identitymodel.tokens.jwt/6.32.1/system.identitymodel.tokens.jwt.6.32.1.nupkg.sha512",
+    "/home/weslen/.nuget/packages/system.runtime/4.3.0/system.runtime.4.3.0.nupkg.sha512",
+    "/home/weslen/.nuget/packages/system.security.cryptography.cng/4.5.0/system.security.cryptography.cng.4.5.0.nupkg.sha512",
+    "/home/weslen/.nuget/packages/system.text.encoding/4.3.0/system.text.encoding.4.3.0.nupkg.sha512",
+    "/home/weslen/.nuget/packages/system.text.encodings.web/4.7.2/system.text.encodings.web.4.7.2.nupkg.sha512",
+    "/home/weslen/.nuget/packages/system.text.json/4.7.2/system.text.json.4.7.2.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package version outside of dependency constraint: MediatR.Extensions.Microsoft.DependencyInjection 11.1.0 requires MediatR (>= 11.0.0 && < 12.0.0) but version MediatR 12.1.1 was resolved.",
+      "libraryId": "MediatR",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }
