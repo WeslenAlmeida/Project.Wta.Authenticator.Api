@@ -1,0 +1,12 @@
+/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Configuration/bin/Debug/net7.0/Project.Wta.Authenticator.CrossCutting.Configuration.deps.json
+/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Configuration/bin/Debug/net7.0/Project.Wta.Authenticator.CrossCutting.Configuration.dll
+/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Configuration/bin/Debug/net7.0/Project.Wta.Authenticator.CrossCutting.Configuration.pdb
+/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Configuration/obj/Debug/net7.0/Project.Wta.Authenticator.CrossCutting.Configuration.csproj.AssemblyReference.cache
+/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Configuration/obj/Debug/net7.0/Project.Wta.Authenticator.CrossCutting.Configuration.GeneratedMSBuildEditorConfig.editorconfig
+/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Configuration/obj/Debug/net7.0/Project.Wta.Authenticator.CrossCutting.Configuration.AssemblyInfoInputs.cache
+/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Configuration/obj/Debug/net7.0/Project.Wta.Authenticator.CrossCutting.Configuration.AssemblyInfo.cs
+/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Configuration/obj/Debug/net7.0/Project.Wta.Authenticator.CrossCutting.Configuration.csproj.CoreCompileInputs.cache
+/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Configuration/obj/Debug/net7.0/Project.Wta.Authenticator.CrossCutting.Configuration.dll
+/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Configuration/obj/Debug/net7.0/refint/Project.Wta.Authenticator.CrossCutting.Configuration.dll
+/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Configuration/obj/Debug/net7.0/Project.Wta.Authenticator.CrossCutting.Configuration.pdb
+/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Configuration/obj/Debug/net7.0/ref/Project.Wta.Authenticator.CrossCutting.Configuration.dll

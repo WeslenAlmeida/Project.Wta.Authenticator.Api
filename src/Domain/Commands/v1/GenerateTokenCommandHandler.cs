@@ -4,6 +4,7 @@ using Domain.Security;
 using MediatR;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
+using Domain.Interfaces.v1;
 
 namespace Domain.Commands.v1
 {
@@ -11,18 +12,22 @@ namespace Domain.Commands.v1
     {
         private readonly SigningConfiguration _signingConfiguration;
         private readonly TokenConfiguration _tokenConfiguration;
+        private readonly IUserRepository _user; 
 
         public GenerateTokenCommandHandler(SigningConfiguration signingConfiguration,
-                                           TokenConfiguration tokenConfiguration)
+                                           TokenConfiguration tokenConfiguration,
+                                           IUserRepository userRepository)
         {
             _signingConfiguration = signingConfiguration;
             _tokenConfiguration = tokenConfiguration;
+            _user = userRepository;
         }
 
         public async Task<object> Handle(GenerateTokenCommand request, CancellationToken cancellationToken)
         {
-            //verificar login e senha no banco
-            var data = "dados do banco";
+            //var data = _user.CheckUser(request.Email!);
+
+            var data = "teste";
 
             if(data is null)
             {
@@ -35,20 +40,18 @@ namespace Domain.Commands.v1
 
             var identity = new ClaimsIdentity
             (
-                new GenericIdentity(request.Email),
+                new GenericIdentity(request.Email!),
                 new[]
                 {
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),  
-                    new Claim(JwtRegisteredClaimNames.UniqueName, request.Email)
+                    new Claim(JwtRegisteredClaimNames.UniqueName, request.Email!)
                 }
             );
 
             var createDate = DateTime.Now;
-
             var expirationDate = createDate + TimeSpan.FromSeconds(_tokenConfiguration.Seconds);
-
             var token = CreateToken(identity, createDate, expirationDate);
-
+            
             return SuccessObject(token);
         }
 
