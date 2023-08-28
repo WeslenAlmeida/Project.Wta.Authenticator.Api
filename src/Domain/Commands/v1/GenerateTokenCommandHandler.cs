@@ -14,12 +14,10 @@ namespace Domain.Commands.v1
         private readonly TokenConfiguration _tokenConfiguration;
         private readonly IUserRepository _user; 
 
-        public GenerateTokenCommandHandler(SigningConfiguration signingConfiguration,
-                                           TokenConfiguration tokenConfiguration,
-                                           IUserRepository userRepository)
+        public GenerateTokenCommandHandler(IUserRepository userRepository)
         {
-            _signingConfiguration = signingConfiguration;
-            _tokenConfiguration = tokenConfiguration;
+            _signingConfiguration = new SigningConfiguration();
+            _tokenConfiguration = new TokenConfiguration();
             _user = userRepository;
         }
 
