@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Wta.Authenticator.Api", "Application\Project.Wta.Authenticator.Api.csproj", "{097E8C0A-FC02-448B-9655-CAC392005775}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Wta.Authenticator.CrossCutting.Configuration", "CrossCutting.Configuration\Project.Wta.Authenticator.CrossCutting.Configuration.csproj", "{C221BDD0-39F1-405E-88C4-2523019E4BC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.wta.Authenticator.CrossCutting.Exception", "CrossCutting.Exception\Project.wta.Authenticator.CrossCutting.Exception.csproj", "{298A1289-33E7-4889-BA61-FBF237E94030}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projetc.Wta.Authenticator.Domain", "Domain\Projetc.Wta.Authenticator.Domain.csproj", "{043182D6-F6D9-4F75-B134-1401DC2BDCA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Wta.Authenticator.Infrastructure.Data", "Infrastructure.Data\Project.Wta.Authenticator.Infrastructure.Data.csproj", "{22DD82A7-70C5-4AD4-BBF5-D7F5BA584D96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Wta.Authenticator.Infrastructure.Cache", "Infrastructure.Cache\Project.Wta.Authenticator.Infrastructure.Cache.csproj", "{39705FAE-3DE0-4EA0-8A38-A8CCDD680CB0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{097E8C0A-FC02-448B-9655-CAC392005775}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{097E8C0A-FC02-448B-9655-CAC392005775}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{097E8C0A-FC02-448B-9655-CAC392005775}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{097E8C0A-FC02-448B-9655-CAC392005775}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C221BDD0-39F1-405E-88C4-2523019E4BC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C221BDD0-39F1-405E-88C4-2523019E4BC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C221BDD0-39F1-405E-88C4-2523019E4BC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C221BDD0-39F1-405E-88C4-2523019E4BC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{298A1289-33E7-4889-BA61-FBF237E94030}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{298A1289-33E7-4889-BA61-FBF237E94030}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{298A1289-33E7-4889-BA61-FBF237E94030}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{298A1289-33E7-4889-BA61-FBF237E94030}.Release|Any CPU.Build.0 = Release|Any CPU
+		{043182D6-F6D9-4F75-B134-1401DC2BDCA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{043182D6-F6D9-4F75-B134-1401DC2BDCA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{043182D6-F6D9-4F75-B134-1401DC2BDCA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{043182D6-F6D9-4F75-B134-1401DC2BDCA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22DD82A7-70C5-4AD4-BBF5-D7F5BA584D96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22DD82A7-70C5-4AD4-BBF5-D7F5BA584D96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22DD82A7-70C5-4AD4-BBF5-D7F5BA584D96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22DD82A7-70C5-4AD4-BBF5-D7F5BA584D96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39705FAE-3DE0-4EA0-8A38-A8CCDD680CB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39705FAE-3DE0-4EA0-8A38-A8CCDD680CB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39705FAE-3DE0-4EA0-8A38-A8CCDD680CB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39705FAE-3DE0-4EA0-8A38-A8CCDD680CB0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

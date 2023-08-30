@@ -1,0 +1,12 @@
+{
+    "resource": [
+      {
+        "key": "InternalErrorException",
+        "value": "Api internal error."
+      },
+      {
+        "key": "UserNotFoundException",
+        "value": "Invalid email or password!"
+      }
+    ]
+  }

@@ -5,6 +5,7 @@ using MediatR;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using Domain.Interfaces.v1;
+using CrossCutting.Exception.CustomExceptions;
 
 namespace Domain.Commands.v1
 {
@@ -13,42 +14,35 @@ namespace Domain.Commands.v1
         private readonly SigningConfiguration _signingConfiguration;
         private readonly TokenConfiguration _tokenConfiguration;
         private readonly IUserRepository _user; 
+        private readonly IRedisService _redis;
 
-        public GenerateTokenCommandHandler(IUserRepository userRepository)
+        public GenerateTokenCommandHandler(IUserRepository userRepository, IRedisService redis)
         {
             _signingConfiguration = new SigningConfiguration();
             _tokenConfiguration = new TokenConfiguration();
             _user = userRepository;
+            _redis = redis;
         }
 
         public async Task<object> Handle(GenerateTokenCommand request, CancellationToken cancellationToken)
         {
-            //var data = _user.CheckUser(request.Email!);
-
-            var data = "teste";
-
-            if(data is null)
-            {
-                return new 
-                {
-                    authenticated = false,
-                    message = "Error !!!"
-                };
-            }
+            var user = await _user.CheckUser(request.Email!) ?? throw new UserNotFoundException();
 
             var identity = new ClaimsIdentity
             (
-                new GenericIdentity(request.Email!),
+                new GenericIdentity(user.Email!),
                 new[]
                 {
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),  
-                    new Claim(JwtRegisteredClaimNames.UniqueName, request.Email!)
+                    new Claim(JwtRegisteredClaimNames.UniqueName, user.Email!)
                 }
             );
 
             var createDate = DateTime.Now;
             var expirationDate = createDate + TimeSpan.FromSeconds(_tokenConfiguration.Seconds);
             var token = CreateToken(identity, createDate, expirationDate);
+
+            await _redis.SetAsync(user.Id, token);
             
             return SuccessObject(token);
         }
@@ -72,7 +66,7 @@ namespace Domain.Commands.v1
             return jwtSecurityTokenHandler.WriteToken(securityToken);
         }
 
-        private object SuccessObject(string token)
+        private static object SuccessObject(string token)
         {
             return new 
                 {
