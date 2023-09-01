@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/Project.Wta.Authenticator.Tests.Shared/Project.Wta.Authenticator.Tests.Shared.csproj",
+      "projectUniqueName": "/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/Project.Wta.Authenticator.Tests.Shared.csproj",
       "projectName": "Project.Wta.Authenticator.Tests.Shared",
-      "projectPath": "/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/Project.Wta.Authenticator.Tests.Shared/Project.Wta.Authenticator.Tests.Shared.csproj",
+      "projectPath": "/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/Project.Wta.Authenticator.Tests.Shared.csproj",
       "packagesPath": "/home/weslen/.nuget/packages/",
-      "outputPath": "/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/Project.Wta.Authenticator.Tests.Shared/obj/",
+      "outputPath": "/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/weslen/.nuget/NuGet/NuGet.Config"

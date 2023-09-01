@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nB9xihO24Dom7SshUSCVN7yEoX49+nzRRd/n7XL/G71sciKK/TsfbX8VXAbU6iKyjv0KOK/JHCNClOBw13Spgg==",
+  "dgSpecHash": "g0D/Ej92MJ6jLGkub2DkYNJNZVHVNuL/Ng6cjdvyWJmFq7GPCH6jwguZS/4KgEdSbiVnqx64SrE1dTSF4bxXbA==",
   "success": true,
-  "projectFilePath": "/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/Project.Wta.Authenticator.Tests.Shared/Project.Wta.Authenticator.Tests.Shared.csproj",
+  "projectFilePath": "/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/Project.Wta.Authenticator.Tests.Shared.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

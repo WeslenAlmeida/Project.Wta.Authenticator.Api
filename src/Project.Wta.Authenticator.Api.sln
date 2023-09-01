@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Wta.Authenticator.I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Wta.Authenticator.Infrastructure.Cache", "Infrastructure.Cache\Project.Wta.Authenticator.Infrastructure.Cache.csproj", "{39705FAE-3DE0-4EA0-8A38-A8CCDD680CB0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Wta.Authenticator.Tests.Unity", "Tests.Unit\Project.Wta.Authenticator.Tests.Unity.csproj", "{FBD42505-3704-4202-B4F3-2C4ED9DB0295}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Wta.Authenticator.Tests.Shared", "Tests.Shared\Project.Wta.Authenticator.Tests.Shared.csproj", "{0AB1D3FF-3837-40D2-BA1F-BF98C714662F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +52,13 @@ Global
 		{39705FAE-3DE0-4EA0-8A38-A8CCDD680CB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39705FAE-3DE0-4EA0-8A38-A8CCDD680CB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39705FAE-3DE0-4EA0-8A38-A8CCDD680CB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBD42505-3704-4202-B4F3-2C4ED9DB0295}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBD42505-3704-4202-B4F3-2C4ED9DB0295}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBD42505-3704-4202-B4F3-2C4ED9DB0295}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBD42505-3704-4202-B4F3-2C4ED9DB0295}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AB1D3FF-3837-40D2-BA1F-BF98C714662F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AB1D3FF-3837-40D2-BA1F-BF98C714662F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AB1D3FF-3837-40D2-BA1F-BF98C714662F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AB1D3FF-3837-40D2-BA1F-BF98C714662F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

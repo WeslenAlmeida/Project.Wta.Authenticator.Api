@@ -1,0 +1,12 @@
+/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/bin/Debug/net7.0/Project.Wta.Authenticator.Tests.Shared.deps.json
+/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/bin/Debug/net7.0/Project.Wta.Authenticator.Tests.Shared.dll
+/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/bin/Debug/net7.0/Project.Wta.Authenticator.Tests.Shared.pdb
+/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/obj/Debug/net7.0/Project.Wta.Authenticator.Tests.Shared.csproj.AssemblyReference.cache
+/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/obj/Debug/net7.0/Project.Wta.Authenticator.Tests.Shared.GeneratedMSBuildEditorConfig.editorconfig
+/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/obj/Debug/net7.0/Project.Wta.Authenticator.Tests.Shared.AssemblyInfoInputs.cache
+/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/obj/Debug/net7.0/Project.Wta.Authenticator.Tests.Shared.AssemblyInfo.cs
+/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/obj/Debug/net7.0/Project.Wta.Authenticator.Tests.Shared.csproj.CoreCompileInputs.cache
+/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/obj/Debug/net7.0/Project.Wta.Authenticator.Tests.Shared.dll
+/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/obj/Debug/net7.0/refint/Project.Wta.Authenticator.Tests.Shared.dll
+/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/obj/Debug/net7.0/Project.Wta.Authenticator.Tests.Shared.pdb
+/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/obj/Debug/net7.0/ref/Project.Wta.Authenticator.Tests.Shared.dll
