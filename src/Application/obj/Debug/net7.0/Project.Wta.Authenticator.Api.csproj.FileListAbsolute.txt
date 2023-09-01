@@ -1,5 +1,5 @@
 /home/workspace/Project.Wta.Authenticator.Api/src/Application/bin/Debug/net7.0/appsettings.json
-/home/workspace/Project.Wta.Authenticator.Api/src/Application/bin/Debug/net7.0/resouces.json
+/home/workspace/Project.Wta.Authenticator.Api/src/Application/bin/Debug/net7.0/resources.json
 /home/workspace/Project.Wta.Authenticator.Api/src/Application/bin/Debug/net7.0/Project.Wta.Authenticator.Api
 /home/workspace/Project.Wta.Authenticator.Api/src/Application/bin/Debug/net7.0/Project.Wta.Authenticator.Api.deps.json
 /home/workspace/Project.Wta.Authenticator.Api/src/Application/bin/Debug/net7.0/Project.Wta.Authenticator.Api.runtimeconfig.json

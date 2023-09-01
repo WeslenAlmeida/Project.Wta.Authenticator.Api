@@ -32,14 +32,13 @@ namespace Application.Infrastructure
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
 
-         private static void InjectRedisService(IServiceCollection services)
+        private static void InjectRedisService(IServiceCollection services)
         {
             services.AddStackExchangeRedisCache(cache => 
             {
                 cache.InstanceName = "Authentication.Api";
                 cache.Configuration = AppSettings.RedisSettings.ConnectionString;
             });
-                
         }
     }
 }

@@ -1,20 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
 using System.Net;
-using System.Threading.Tasks;
-using Domain.Commands.v1;
+using Domain.Commands.v1.GenerateToken;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 namespace Application.Controllers.v1
 {
-    [Route("api/v1/user")]
+    [Route("api/v1/token")]
     public class UserController : ApiBaseController
     {
-         public UserController(IMediator mediator) : base(mediator)
+        public UserController(IMediator mediator) : base(mediator)
         {
         }
         

@@ -1,4 +1,5 @@
 using System.Net;
+using CrossCutting.Exception;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,7 +20,12 @@ namespace Application.Controllers
                var response = await _mediator.Send(request);
                return StatusCode((int)statusCode, response);
                
-            }catch(Exception ex)
+            }
+            catch (BaseException ex)
+            {
+                return StatusCode(ex.StatusCode, ex.CustomMessage);
+            }
+            catch(Exception ex)
             {
                 return StatusCode((int)HttpStatusCode.InternalServerError, ex.Message);
             }

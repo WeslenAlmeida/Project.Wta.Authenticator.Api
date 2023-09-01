@@ -9,8 +9,5 @@ namespace Domain.Models.v1
 
          [BsonElement("email")]
         public string? Email { get; set; }
-
-         [BsonElement("password")]
-        public string? Password { get; set; }
     }
 }

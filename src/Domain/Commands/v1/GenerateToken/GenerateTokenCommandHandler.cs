@@ -6,8 +6,9 @@ using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using Domain.Interfaces.v1;
 using CrossCutting.Exception.CustomExceptions;
+using CrossCutting.Configuration;
 
-namespace Domain.Commands.v1
+namespace Domain.Commands.v1.GenerateToken
 {
     public class GenerateTokenCommandHandler : IRequestHandler<GenerateTokenCommand, object>
     {
@@ -15,6 +16,7 @@ namespace Domain.Commands.v1
         private readonly TokenConfiguration _tokenConfiguration;
         private readonly IUserRepository _user; 
         private readonly IRedisService _redis;
+        private readonly string? _validationId;
 
         public GenerateTokenCommandHandler(IUserRepository userRepository, IRedisService redis)
         {
@@ -22,11 +24,14 @@ namespace Domain.Commands.v1
             _tokenConfiguration = new TokenConfiguration();
             _user = userRepository;
             _redis = redis;
+            _validationId = AppSettings.ValidationId.Id;
         }
 
         public async Task<object> Handle(GenerateTokenCommand request, CancellationToken cancellationToken)
         {
-            var user = await _user.CheckUser(request.Email!) ?? throw new UserNotFoundException();
+            var user = await _user.CheckUser(request.Email!)?? throw new UserNotFoundException();
+
+            if(request.ValidationId !=_validationId) throw new UnauthorizedException();
 
             var identity = new ClaimsIdentity
             (
