@@ -7,8 +7,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="MediatR" Version="11.1.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.10" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="7.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Projetc.Wta.Authenticator.Domain.csproj" />
+    <ProjectReference Include="..\Infrastructure.Data\Project.Wta.Authenticator.Infrastructure.Data.csproj" />
+    <ProjectReference Include="..\Infrastructure.Cache\Project.Wta.Authenticator.Infrastructure.Cache.csproj" />
+    <ProjectReference Include="..\Tests.Shared\Project.Wta.Authenticator.Tests.Shared.csproj" />
+    <ProjectReference Include="..\Tests.Unity\Project.Wta.Authenticator.Tests.Unity.csproj" />
   </ItemGroup>
 
 </Project>
