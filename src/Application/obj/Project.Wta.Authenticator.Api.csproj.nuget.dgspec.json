@@ -34,6 +34,12 @@
               },
               "/home/workspace/Project.Wta.Authenticator.Api/src/Infrastructure.Data/Project.Wta.Authenticator.Infrastructure.Data.csproj": {
                 "projectPath": "/home/workspace/Project.Wta.Authenticator.Api/src/Infrastructure.Data/Project.Wta.Authenticator.Infrastructure.Data.csproj"
+              },
+              "/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/Project.Wta.Authenticator.Tests.Shared.csproj": {
+                "projectPath": "/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/Project.Wta.Authenticator.Tests.Shared.csproj"
+              },
+              "/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Unity/Project.Wta.Authenticator.Tests.Unity.csproj": {
+                "projectPath": "/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Unity/Project.Wta.Authenticator.Tests.Unity.csproj"
               }
             }
           }
@@ -440,6 +446,170 @@
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.21.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.110/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/Project.Wta.Authenticator.Tests.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/Project.Wta.Authenticator.Tests.Shared.csproj",
+        "projectName": "Project.Wta.Authenticator.Tests.Shared",
+        "projectPath": "/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/Project.Wta.Authenticator.Tests.Shared.csproj",
+        "packagesPath": "/home/weslen/.nuget/packages/",
+        "outputPath": "/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/weslen/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/home/workspace/Project.Wta.Authenticator.Api/src/Domain/Projetc.Wta.Authenticator.Domain.csproj": {
+                "projectPath": "/home/workspace/Project.Wta.Authenticator.Api/src/Domain/Projetc.Wta.Authenticator.Domain.csproj"
+              },
+              "/home/workspace/Project.Wta.Authenticator.Api/src/Infrastructure.Cache/Project.Wta.Authenticator.Infrastructure.Cache.csproj": {
+                "projectPath": "/home/workspace/Project.Wta.Authenticator.Api/src/Infrastructure.Cache/Project.Wta.Authenticator.Infrastructure.Cache.csproj"
+              },
+              "/home/workspace/Project.Wta.Authenticator.Api/src/Infrastructure.Data/Project.Wta.Authenticator.Infrastructure.Data.csproj": {
+                "projectPath": "/home/workspace/Project.Wta.Authenticator.Api/src/Infrastructure.Data/Project.Wta.Authenticator.Infrastructure.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.7.2, )"
+            },
+            "NSubstitute": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.3, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.110/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Unity/Project.Wta.Authenticator.Tests.Unity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Unity/Project.Wta.Authenticator.Tests.Unity.csproj",
+        "projectName": "Project.Wta.Authenticator.Tests.Unity",
+        "projectPath": "/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Unity/Project.Wta.Authenticator.Tests.Unity.csproj",
+        "packagesPath": "/home/weslen/.nuget/packages/",
+        "outputPath": "/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Unity/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/weslen/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/Project.Wta.Authenticator.Tests.Shared.csproj": {
+                "projectPath": "/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/Project.Wta.Authenticator.Tests.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.2.10, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.2.10, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.7.2, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.3, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.1.2, )"
             }
           },
           "imports": [

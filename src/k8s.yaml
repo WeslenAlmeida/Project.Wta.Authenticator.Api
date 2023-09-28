@@ -1,0 +1,46 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: project-auth-svc
+spec:
+  selector:
+    app: project-auth
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: project-auth
+spec:
+  selector:
+    matchLabels:
+      app: project-auth
+  template:
+    metadata:
+      labels:
+        app: project-auth
+    spec:
+      containers:
+      - name: project-auth
+        image: weslenalmeida/project-auth:dev
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
+        env:
+          - name: MongoSettings__DatabaseName
+            value: "WtaManagementCars"
+          - name: MongoSettings__ConnectionString
+            value: "mongodb://localhost:27017"  
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name:  default 
+
+

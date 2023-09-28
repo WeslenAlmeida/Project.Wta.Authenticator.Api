@@ -22,6 +22,8 @@
     <ProjectReference Include="..\Domain\Projetc.Wta.Authenticator.Domain.csproj" />
     <ProjectReference Include="..\Infrastructure.Data\Project.Wta.Authenticator.Infrastructure.Data.csproj" />
     <ProjectReference Include="..\Infrastructure.Cache\Project.Wta.Authenticator.Infrastructure.Cache.csproj" />
+    <ProjectReference Include="..\Tests.Shared\Project.Wta.Authenticator.Tests.Shared.csproj" />
+    <ProjectReference Include="..\Tests.Unity\Project.Wta.Authenticator.Tests.Unity.csproj" />
   </ItemGroup>
 
 </Project>

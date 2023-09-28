@@ -24,14 +24,14 @@ namespace Domain.Commands.v1.GenerateToken
             _tokenConfiguration = new TokenConfiguration();
             _user = userRepository;
             _redis = redis;
-            _validationId = AppSettings.ValidationId.Id;
+            _validationId = AppSettings.AccessToken.Id;
         }
 
         public async Task<object> Handle(GenerateTokenCommand request, CancellationToken cancellationToken)
         {
             var user = await _user.CheckUser(request.Email!)?? throw new UserNotFoundException();
 
-            if(request.ValidationId !=_validationId) throw new UnauthorizedException();
+            if(request.AccessToken !=_validationId) throw new UnauthorizedException();
 
             var identity = new ClaimsIdentity
             (
