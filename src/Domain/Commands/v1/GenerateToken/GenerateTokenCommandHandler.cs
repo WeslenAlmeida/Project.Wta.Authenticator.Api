@@ -1,7 +1,7 @@
 using System.Security.Principal;
 using System.Security.Claims;
 using Domain.Security;
-using MediatR;
+using MedeiatR;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using Domain.Interfaces.v1;
@@ -16,7 +16,7 @@ namespace Domain.Commands.v1.GenerateToken
         private readonly TokenConfiguration _tokenConfiguration;
         private readonly IUserRepository _user; 
         private readonly IRedisService _redis;
-        private readonly string? _validationId;
+        private readonly string? _apikey;
 
         public GenerateTokenCommandHandler(IUserRepository userRepository, IRedisService redis)
         {
@@ -24,14 +24,14 @@ namespace Domain.Commands.v1.GenerateToken
             _tokenConfiguration = new TokenConfiguration();
             _user = userRepository;
             _redis = redis;
-            _validationId = AppSettings.AccessToken.Id;
+            _apikey = AppSettings.ApiKey.Id;
         }
 
         public async Task<object> Handle(GenerateTokenCommand request, CancellationToken cancellationToken)
         {
             var user = await _user.CheckUser(request.Email!)?? throw new UserNotFoundException();
 
-            if(request.AccessToken !=_validationId) throw new UnauthorizedException();
+            if(request.ApiKey !=_apikey) throw new UnauthorizedException();
 
             var identity = new ClaimsIdentity
             (

@@ -1,12 +1,12 @@
 namespace CrossCutting.Configuration.AppModels
 {
-    public class AccessToken
+    public class ApiKey
     {
         public string? Id 
         { 
             get
             {
-                return ConfigurationAppSettings.Builder()["AccessToken"];
+                return ConfigurationAppSettings.Builder()["ApiKey"];
             }
         }
     }
