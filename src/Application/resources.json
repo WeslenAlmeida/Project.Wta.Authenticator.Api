@@ -11,6 +11,10 @@
     {
       "key": "UnauthorizedException",
       "value": "Unauthorized Access!"
+    },
+    {
+      "key": "TokenNotFoundException",
+      "value": "Invalid or expired token!"
     }
   ]
 }

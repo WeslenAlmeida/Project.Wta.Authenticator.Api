@@ -9,21 +9,21 @@ namespace Tests.Shared.Commands.v1.GenerateToken
             new GenerateTokenCommand
             {
                 Email = "teste@teste.com",
-                AccessToken = AppSettings.AccessToken.Id
+                ApiKey = AppSettings.ApiKey.Id
             };
 
         public static GenerateTokenCommand GetFailedEmail() =>
             new GenerateTokenCommand
             {
                 Email = "teste1@teste.com",
-                AccessToken = AppSettings.AccessToken.Id
+                ApiKey = AppSettings.ApiKey.Id
             };
 
         public static GenerateTokenCommand GetFailedValidation() =>
             new GenerateTokenCommand
             {
                 Email = "teste@teste.com",
-                AccessToken ="123"
+                ApiKey ="123"
             };
     }
 }

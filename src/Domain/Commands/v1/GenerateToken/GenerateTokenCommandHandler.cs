@@ -1,12 +1,14 @@
 using System.Security.Principal;
 using System.Security.Claims;
 using Domain.Security;
-using MedeiatR;
+using MediatR;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using Domain.Interfaces.v1;
 using CrossCutting.Exception.CustomExceptions;
 using CrossCutting.Configuration;
+using Newtonsoft.Json;
+using Domain.Models.v1;
 
 namespace Domain.Commands.v1.GenerateToken
 {
@@ -29,7 +31,9 @@ namespace Domain.Commands.v1.GenerateToken
 
         public async Task<object> Handle(GenerateTokenCommand request, CancellationToken cancellationToken)
         {
-            var user = await _user.CheckUser(request.Email!)?? throw new UserNotFoundException();
+            //var user = await _user.CheckUser(request.Email!)?? throw new UserNotFoundException();
+
+            var user = request;
 
             if(request.ApiKey !=_apikey) throw new UnauthorizedException();
 
@@ -47,7 +51,7 @@ namespace Domain.Commands.v1.GenerateToken
             var expirationDate = createDate + TimeSpan.FromSeconds(_tokenConfiguration.Seconds);
             var token = CreateToken(identity, createDate, expirationDate);
 
-            await _redis.SetAsync(user.Id, token);
+            await _redis.SetAsync(token, JsonConvert.SerializeObject(new TokenData(request.Email!, expirationDate)));
             
             return SuccessObject(token);
         }

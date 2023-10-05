@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Fvw4fQHSA949QN0WhnBad7H5nODqDa7RnPCfG4KF+vLt/t4St1KJpTzGsZzSst1KD6ns492x/gBGSV+98HM4Lw==",
+  "dgSpecHash": "kiysfYlPdmkc/ll4hnZISqzcnWLreIyUqkv3PqeSmBt0ON0pibIoxV8yDYKbCM4poxIY6XZUh/RPAe37fL+3fA==",
   "success": true,
   "projectFilePath": "/home/workspace/Project.Wta.Authenticator.Api/src/Application/Project.Wta.Authenticator.Api.csproj",
   "expectedPackageFiles": [
@@ -99,7 +99,7 @@
     "/home/weslen/.nuget/packages/mstest.testadapter/2.2.10/mstest.testadapter.2.2.10.nupkg.sha512",
     "/home/weslen/.nuget/packages/mstest.testframework/2.2.10/mstest.testframework.2.2.10.nupkg.sha512",
     "/home/weslen/.nuget/packages/netstandard.library/2.0.0/netstandard.library.2.0.0.nupkg.sha512",
-    "/home/weslen/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/home/weslen/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
     "/home/weslen/.nuget/packages/newtonsoft.json.bson/1.0.1/newtonsoft.json.bson.1.0.1.nupkg.sha512",
     "/home/weslen/.nuget/packages/nsubstitute/5.0.0/nsubstitute.5.0.0.nupkg.sha512",
     "/home/weslen/.nuget/packages/nuget.frameworks/6.5.0/nuget.frameworks.6.5.0.nupkg.sha512",

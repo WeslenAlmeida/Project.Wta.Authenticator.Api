@@ -1,6 +1,6 @@
 using CrossCutting.Configuration;
 using Domain.Interfaces.v1;
-using Domain.Models.v1;
+using Domain.Entities;
 using MongoDB.Driver;
 
 namespace Infrastructure.Data.v1.Mongo

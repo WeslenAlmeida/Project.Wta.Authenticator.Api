@@ -21,7 +21,7 @@ namespace Infrastructure.Cache.v1
             return await _cache.GetStringAsync(key);
         }
 
-        public async Task SetAsync(Guid key, string value)
+        public async Task SetAsync(string key, string value)
         {
             await _cache.SetStringAsync(key.ToString(), value,_options);
         }
