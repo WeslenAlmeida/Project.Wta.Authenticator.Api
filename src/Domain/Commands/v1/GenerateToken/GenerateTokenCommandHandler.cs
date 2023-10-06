@@ -30,15 +30,26 @@ namespace Domain.Commands.v1.GenerateToken
 
         public async Task<object> Handle(GenerateTokenCommand request, CancellationToken cancellationToken)
         {
-            var user = await _user.CheckUser(request.Email!)?? throw new UserNotFoundException();
+            var email = await _redis.GetAsync(request.Email!);
+
+            if(string.IsNullOrEmpty(email))
+            {
+                if(await _user.CheckUser(request.Email!))
+                {
+                    await _redis.SetAsync(request.Email!, request.Email!);
+                    email = request.Email;
+                }    
+                else
+                    throw new UserNotFoundException();    
+            }
 
             var identity = new ClaimsIdentity
             (
-                new GenericIdentity(user.Email!),
+                new GenericIdentity(email!),
                 new[]
                 {
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),  
-                    new Claim(JwtRegisteredClaimNames.UniqueName, user.Email!)
+                    new Claim(JwtRegisteredClaimNames.UniqueName, email!)
                 }
             );
 

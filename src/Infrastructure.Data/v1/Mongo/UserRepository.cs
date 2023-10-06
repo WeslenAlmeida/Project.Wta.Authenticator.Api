@@ -15,11 +15,12 @@ namespace Infrastructure.Data.v1.Mongo
             _userCollection = mongoDatabase.GetCollection<UserEntity>("user");
         }
 
-        public async Task<UserEntity> CheckUser(string email)
+        public async Task<bool> CheckUser(string email)
         {
             var response = await _userCollection.FindAsync(x => x.Email == email);
-
-            return response.FirstOrDefault();
+            if(response is null || !response.Any())
+                return false;
+            return true;
         }
     }
 }

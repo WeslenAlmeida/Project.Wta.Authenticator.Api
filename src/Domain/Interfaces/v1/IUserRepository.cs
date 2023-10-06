@@ -4,6 +4,6 @@ namespace Domain.Interfaces.v1
 {
     public interface IUserRepository
     {
-        public Task<UserEntity> CheckUser (string email);
+        public Task<bool> CheckUser (string email);
     }
 }
