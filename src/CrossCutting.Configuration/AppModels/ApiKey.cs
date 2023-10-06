@@ -2,11 +2,19 @@ namespace CrossCutting.Configuration.AppModels
 {
     public class ApiKey
     {
-        public string? Id 
+        public string? Name 
         { 
             get
             {
-                return ConfigurationAppSettings.Builder()["ApiKey"];
+                return ConfigurationAppSettings.Builder()["Authorization:ApiKeyName"];
+            }
+        }
+
+         public string? Key 
+        { 
+            get
+            {
+                return ConfigurationAppSettings.Builder()["Authorization:ApiKey"];
             }
         }
     }

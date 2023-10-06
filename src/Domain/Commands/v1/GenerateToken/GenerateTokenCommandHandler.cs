@@ -26,16 +26,11 @@ namespace Domain.Commands.v1.GenerateToken
             _tokenConfiguration = new TokenConfiguration();
             _user = userRepository;
             _redis = redis;
-            _apikey = AppSettings.ApiKey.Id;
         }
 
         public async Task<object> Handle(GenerateTokenCommand request, CancellationToken cancellationToken)
         {
-            //var user = await _user.CheckUser(request.Email!)?? throw new UserNotFoundException();
-
-            var user = request;
-
-            if(request.ApiKey !=_apikey) throw new UnauthorizedException();
+            var user = await _user.CheckUser(request.Email!)?? throw new UserNotFoundException();
 
             var identity = new ClaimsIdentity
             (
