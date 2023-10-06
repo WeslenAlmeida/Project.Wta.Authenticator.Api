@@ -1,6 +1,7 @@
 using System.Net;
 using Domain.Commands.v1.GenerateToken;
 using Domain.Queries.v1.GetToken;
+using Domain.Shared.v1.Authorization;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

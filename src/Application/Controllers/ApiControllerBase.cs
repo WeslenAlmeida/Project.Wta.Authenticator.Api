@@ -1,10 +1,12 @@
 using System.Net;
 using CrossCutting.Exception;
+using Domain.Shared.v1.Authorization;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Application.Controllers
 {
+    [ApiKey]   
     public abstract class ApiBaseController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -13,6 +15,7 @@ namespace Application.Controllers
         {
             _mediator = mediator;
         }
+
         protected async Task<IActionResult> GenerateHttpResponse(object request, HttpStatusCode statusCode)
         {
             try
