@@ -21,7 +21,7 @@ namespace Application.Controllers.v1
         }
 
         [HttpGet]
-        public async Task<IActionResult> GenerateToken([FromBody]GetTokenQuery request)
+        public async Task<IActionResult> GenerateToken([FromBody]GetTokenInfoQuery request)
         {
             return await GenerateHttpResponse(request, HttpStatusCode.OK);
         }

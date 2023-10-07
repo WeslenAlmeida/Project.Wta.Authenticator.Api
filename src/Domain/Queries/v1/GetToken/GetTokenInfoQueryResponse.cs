@@ -1,11 +1,11 @@
 namespace Domain.Queries.v1.GetToken
 {
-    public class GetTokenQueryResponse
+    public class GetTokenInfoQueryResponse
     {
         public string? Email { get; set; }
         public DateTime  ExpirateDate { get; set; }
 
-        public GetTokenQueryResponse(string email, DateTime expirateDate) 
+        public GetTokenInfoQueryResponse(string email, DateTime expirateDate) 
         {
             Email = email;
             ExpirateDate = expirateDate;

@@ -22,7 +22,7 @@ namespace Tests.Unity.Domain.CommandsHandler.v1.GenerateToken
         {
             return new GenerateTokenCommandHandler(
                 new UserRepositoryMock().SetUpFailed(),
-                new RedisMock().SetUpSuccess()
+                new RedisMock().SetUpFailed()
             );
         }
 
