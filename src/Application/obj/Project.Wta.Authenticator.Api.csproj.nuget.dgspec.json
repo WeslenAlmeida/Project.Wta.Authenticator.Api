@@ -181,12 +181,12 @@
         }
       }
     },
-    "/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Exception/Project.wta.Authenticator.CrossCutting.Exception.csproj": {
+    "/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Exception/Project.Wta.Authenticator.CrossCutting.Exception.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Exception/Project.wta.Authenticator.CrossCutting.Exception.csproj",
-        "projectName": "Project.wta.Authenticator.CrossCutting.Exception",
-        "projectPath": "/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Exception/Project.wta.Authenticator.CrossCutting.Exception.csproj",
+        "projectUniqueName": "/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Exception/Project.Wta.Authenticator.CrossCutting.Exception.csproj",
+        "projectName": "Project.Wta.Authenticator.CrossCutting.Exception",
+        "projectPath": "/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Exception/Project.Wta.Authenticator.CrossCutting.Exception.csproj",
         "packagesPath": "/home/weslen/.nuget/packages/",
         "outputPath": "/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Exception/obj/",
         "projectStyle": "PackageReference",
@@ -285,8 +285,8 @@
               "/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Configuration/Project.Wta.Authenticator.CrossCutting.Configuration.csproj": {
                 "projectPath": "/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Configuration/Project.Wta.Authenticator.CrossCutting.Configuration.csproj"
               },
-              "/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Exception/Project.wta.Authenticator.CrossCutting.Exception.csproj": {
-                "projectPath": "/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Exception/Project.wta.Authenticator.CrossCutting.Exception.csproj"
+              "/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Exception/Project.Wta.Authenticator.CrossCutting.Exception.csproj": {
+                "projectPath": "/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Exception/Project.Wta.Authenticator.CrossCutting.Exception.csproj"
               }
             }
           }

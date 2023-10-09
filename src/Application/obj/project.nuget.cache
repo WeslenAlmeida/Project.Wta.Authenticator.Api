@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kiysfYlPdmkc/ll4hnZISqzcnWLreIyUqkv3PqeSmBt0ON0pibIoxV8yDYKbCM4poxIY6XZUh/RPAe37fL+3fA==",
+  "dgSpecHash": "52zA/ILpGu8E6n3FIMkEEWSkWTK/pUKPKW2zLsLx6UBie7h43/2y82BFeqtH7DEcWAlygtrGt+YDOfxYxrtCsQ==",
   "success": true,
   "projectFilePath": "/home/workspace/Project.Wta.Authenticator.Api/src/Application/Project.Wta.Authenticator.Api.csproj",
   "expectedPackageFiles": [

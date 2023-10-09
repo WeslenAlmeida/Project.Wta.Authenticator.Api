@@ -3183,7 +3183,7 @@
           "bin/placeholder/Project.Wta.Authenticator.CrossCutting.Configuration.dll": {}
         }
       },
-      "Project.wta.Authenticator.CrossCutting.Exception/1.0.0": {
+      "Project.Wta.Authenticator.CrossCutting.Exception/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -3195,10 +3195,10 @@
           "Microsoft.Extensions.Configuration.Json": "7.0.0"
         },
         "compile": {
-          "bin/placeholder/Project.wta.Authenticator.CrossCutting.Exception.dll": {}
+          "bin/placeholder/Project.Wta.Authenticator.CrossCutting.Exception.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Project.wta.Authenticator.CrossCutting.Exception.dll": {}
+          "bin/placeholder/Project.Wta.Authenticator.CrossCutting.Exception.dll": {}
         }
       }
     }
@@ -8965,10 +8965,10 @@
       "path": "../CrossCutting.Configuration/Project.Wta.Authenticator.CrossCutting.Configuration.csproj",
       "msbuildProject": "../CrossCutting.Configuration/Project.Wta.Authenticator.CrossCutting.Configuration.csproj"
     },
-    "Project.wta.Authenticator.CrossCutting.Exception/1.0.0": {
+    "Project.Wta.Authenticator.CrossCutting.Exception/1.0.0": {
       "type": "project",
-      "path": "../CrossCutting.Exception/Project.wta.Authenticator.CrossCutting.Exception.csproj",
-      "msbuildProject": "../CrossCutting.Exception/Project.wta.Authenticator.CrossCutting.Exception.csproj"
+      "path": "../CrossCutting.Exception/Project.Wta.Authenticator.CrossCutting.Exception.csproj",
+      "msbuildProject": "../CrossCutting.Exception/Project.Wta.Authenticator.CrossCutting.Exception.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8979,7 +8979,7 @@
       "MongoDB.Driver >= 2.21.0",
       "Newtonsoft.Json >= 13.0.3",
       "Project.Wta.Authenticator.CrossCutting.Configuration >= 1.0.0",
-      "Project.wta.Authenticator.CrossCutting.Exception >= 1.0.0",
+      "Project.Wta.Authenticator.CrossCutting.Exception >= 1.0.0",
       "System.IdentityModel.Tokens.Jwt >= 6.32.1"
     ]
   },
@@ -9011,8 +9011,8 @@
             "/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Configuration/Project.Wta.Authenticator.CrossCutting.Configuration.csproj": {
               "projectPath": "/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Configuration/Project.Wta.Authenticator.CrossCutting.Configuration.csproj"
             },
-            "/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Exception/Project.wta.Authenticator.CrossCutting.Exception.csproj": {
-              "projectPath": "/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Exception/Project.wta.Authenticator.CrossCutting.Exception.csproj"
+            "/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Exception/Project.Wta.Authenticator.CrossCutting.Exception.csproj": {
+              "projectPath": "/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Exception/Project.Wta.Authenticator.CrossCutting.Exception.csproj"
             }
           }
         }

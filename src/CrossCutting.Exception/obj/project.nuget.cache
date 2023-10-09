@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "E/NwfNH2aiMjHSwBPJd5toEAkiVKH7uVWabDn9vlb09gQ/lLQrO6/upOV4w/nFdYHbOmy1ErNcVFAoe7Bu99sA==",
+  "dgSpecHash": "m0ORC+iyKOdfLDogThlelfVT+kX6kAPVfmm+c/uijkDwk/LlZrvkBkzPAmLpfARoiRwKyWjfvedJm2U8zxlAeQ==",
   "success": true,
-  "projectFilePath": "/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Exception/Project.wta.Authenticator.CrossCutting.Exception.csproj",
+  "projectFilePath": "/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Exception/Project.Wta.Authenticator.CrossCutting.Exception.csproj",
   "expectedPackageFiles": [
     "/home/weslen/.nuget/packages/microsoft.aspnetcore.antiforgery/2.2.0/microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "/home/weslen/.nuget/packages/microsoft.aspnetcore.authentication.abstractions/2.2.0/microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

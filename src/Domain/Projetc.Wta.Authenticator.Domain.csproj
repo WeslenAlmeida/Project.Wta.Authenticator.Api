@@ -17,7 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CrossCutting.Configuration\Project.Wta.Authenticator.CrossCutting.Configuration.csproj" />
-    <ProjectReference Include="..\CrossCutting.Exception\Project.wta.Authenticator.CrossCutting.Exception.csproj" />
+    <ProjectReference Include="..\CrossCutting.Exception\Project.Wta.Authenticator.CrossCutting.Exception.csproj" />
   </ItemGroup>
 
 </Project>

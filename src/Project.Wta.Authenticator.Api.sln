@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Wta.Authenticator.A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Wta.Authenticator.CrossCutting.Configuration", "CrossCutting.Configuration\Project.Wta.Authenticator.CrossCutting.Configuration.csproj", "{C221BDD0-39F1-405E-88C4-2523019E4BC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.wta.Authenticator.CrossCutting.Exception", "CrossCutting.Exception\Project.wta.Authenticator.CrossCutting.Exception.csproj", "{298A1289-33E7-4889-BA61-FBF237E94030}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Wta.Authenticator.CrossCutting.Exception", "CrossCutting.Exception\Project.Wta.Authenticator.CrossCutting.Exception.csproj", "{298A1289-33E7-4889-BA61-FBF237E94030}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projetc.Wta.Authenticator.Domain", "Domain\Projetc.Wta.Authenticator.Domain.csproj", "{043182D6-F6D9-4F75-B134-1401DC2BDCA7}"
 EndProject

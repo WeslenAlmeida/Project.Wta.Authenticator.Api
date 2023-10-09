@@ -1,8 +1,8 @@
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace Domain.Entities
+namespace Domain.Entities 
 {
-    public class UserEntity
+    public class UserEntity 
     {
          [BsonElement("id")]
         public Guid Id { get; set; }

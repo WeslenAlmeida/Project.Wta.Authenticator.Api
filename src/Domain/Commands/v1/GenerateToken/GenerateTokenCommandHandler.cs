@@ -6,7 +6,6 @@ using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using Domain.Interfaces.v1;
 using CrossCutting.Exception.CustomExceptions;
-using CrossCutting.Configuration;
 using Newtonsoft.Json;
 using Domain.Models.v1;
 
