@@ -1,5 +1,7 @@
 using CrossCutting.Exception.CustomExceptions;
 using Domain.Commands.v1.GenerateToken;
+using Microsoft.Extensions.Logging;
+using Moq;
 using NUnit.Framework;
 using Tests.Shared.Commands.v1.GenerateToken;
 using Tests.Shared.Infrastructure.v1.Redis;
@@ -14,7 +16,8 @@ namespace Tests.Unity.Domain.CommandsHandler.v1.GenerateToken
         {
             return new GenerateTokenCommandHandler(
                 new UserRepositoryMock().SetUpSuccess(),
-                new RedisMock().SetUpSuccess()
+                new RedisMock().SetUpSuccess(),
+                new Mock<Logger<GenerateTokenCommandHandler>>().Object
             );
         }
 
@@ -22,15 +25,8 @@ namespace Tests.Unity.Domain.CommandsHandler.v1.GenerateToken
         {
             return new GenerateTokenCommandHandler(
                 new UserRepositoryMock().SetUpFailed(),
-                new RedisMock().SetUpSuccess()
-            );
-        }
-
-        private static GenerateTokenCommandHandler GetUnauthorizedContext()
-        {
-            return new GenerateTokenCommandHandler(
-                new UserRepositoryMock().SetUpSuccess(),
-                new RedisMock().SetUpSuccess()
+                new RedisMock().SetUpFailed(),
+                new Mock<Logger<GenerateTokenCommandHandler>>().Object
             );
         }
 
@@ -41,15 +37,9 @@ namespace Tests.Unity.Domain.CommandsHandler.v1.GenerateToken
         }
 
         [Test]
-        public void Can_generate_token_when_ValidateId_Failed()
+        public void Can_generate_token_when_Validate_Email_Failed()
         {
             Assert.ThrowsAsync<UserNotFoundException>(async () => {await GetUserInvalidContext().Handle(GenerateTokenCommandMock.GetFailedEmail(), CancellationToken.None);});
-        }
-
-        [Test]
-        public void Can_generate_token_when_Email_Failed()
-        {
-            Assert.ThrowsAsync<UnauthorizedException>(async () => {await GetUnauthorizedContext().Handle(GenerateTokenCommandMock.GetFailedValidation(), CancellationToken.None);});
         }
     }
 }

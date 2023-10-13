@@ -6,48 +6,64 @@ using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using Domain.Interfaces.v1;
 using CrossCutting.Exception.CustomExceptions;
-using CrossCutting.Configuration;
+using Newtonsoft.Json;
+using Domain.Models.v1;
+using Microsoft.Extensions.Logging;
 
 namespace Domain.Commands.v1.GenerateToken
 {
-    public class GenerateTokenCommandHandler : IRequestHandler<GenerateTokenCommand, object>
+    public class GenerateTokenCommandHandler : IRequestHandler<GenerateTokenCommand, GenerateTokenCommandResponse>
     {
         private readonly SigningConfiguration _signingConfiguration;
         private readonly TokenConfiguration _tokenConfiguration;
         private readonly IUserRepository _user; 
         private readonly IRedisService _redis;
-        private readonly string? _validationId;
+        private readonly string? _apikey;
+        private readonly ILogger<GenerateTokenCommandHandler> _logger;
 
-        public GenerateTokenCommandHandler(IUserRepository userRepository, IRedisService redis)
+        public GenerateTokenCommandHandler(IUserRepository userRepository, IRedisService redis, ILogger<GenerateTokenCommandHandler> logger)
         {
+            _logger = logger;
             _signingConfiguration = new SigningConfiguration();
             _tokenConfiguration = new TokenConfiguration();
             _user = userRepository;
             _redis = redis;
-            _validationId = AppSettings.AccessToken.Id;
         }
 
-        public async Task<object> Handle(GenerateTokenCommand request, CancellationToken cancellationToken)
+        public async Task<GenerateTokenCommandResponse> Handle(GenerateTokenCommand request, CancellationToken cancellationToken)
         {
-            var user = await _user.CheckUser(request.Email!)?? throw new UserNotFoundException();
+            _logger.LogInformation("Start GenerateTokenCommandHandler");
 
-            if(request.AccessToken !=_validationId) throw new UnauthorizedException();
+            var email = await _redis.GetAsync(request.Email!);
+
+            if(string.IsNullOrEmpty(email))
+            {
+                if(await _user.CheckUser(request.Email!))
+                {
+                    await _redis.SetAsync(request.Email!, request.Email!);
+                    email = request.Email;
+                }    
+                else
+                    throw new UserNotFoundException();    
+            }
 
             var identity = new ClaimsIdentity
             (
-                new GenericIdentity(user.Email!),
+                new GenericIdentity(email!),
                 new[]
                 {
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),  
-                    new Claim(JwtRegisteredClaimNames.UniqueName, user.Email!)
+                    new Claim(JwtRegisteredClaimNames.UniqueName, email!)
                 }
             );
 
-            var createDate = DateTime.Now;
-            var expirationDate = createDate + TimeSpan.FromSeconds(_tokenConfiguration.Seconds);
+            var createDate = DateTime.UtcNow;
+            var expirationDate = createDate.AddSeconds(_tokenConfiguration.Seconds);
             var token = CreateToken(identity, createDate, expirationDate);
 
-            await _redis.SetAsync(user.Id, token);
+            await _redis.SetAsync(token, JsonConvert.SerializeObject(new TokenData(request.Email!, expirationDate)));
+
+            _logger.LogInformation("End GenerateTokenCommandHandler");
             
             return SuccessObject(token);
         }
@@ -71,13 +87,13 @@ namespace Domain.Commands.v1.GenerateToken
             return jwtSecurityTokenHandler.WriteToken(securityToken);
         }
 
-        private static object SuccessObject(string token)
+        private static GenerateTokenCommandResponse SuccessObject(string token)
         {
-            return new 
+            return new GenerateTokenCommandResponse()
                 {
-                    authenticated = true,
-                    message = "Success !!!",
-                    accessToken = token
+                    Authenticated = true,
+                    Message = "Success !!!",
+                    AccessToken = token
                 };
         }
     }

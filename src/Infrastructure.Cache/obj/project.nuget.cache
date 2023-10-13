@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bEJTGUunsZYEUZ2EHZ8Kq2ombs5espgJN0dD1Qls/G/Ajlw3xrfBMKTcmXHTmt9B2RD+jz++rxk7WtvSCvJiTA==",
+  "dgSpecHash": "PvYxMA55EZhoWopympQvLZhekp98LtYg5aoTDGlbYbYKfP3u7BREh05+ew/dG2cnOp97+1k7M41++iH3Z2RKfg==",
   "success": true,
   "projectFilePath": "/home/workspace/Project.Wta.Authenticator.Api/src/Infrastructure.Cache/Project.Wta.Authenticator.Infrastructure.Cache.csproj",
   "expectedPackageFiles": [
@@ -88,7 +88,7 @@
     "/home/weslen/.nuget/packages/mongodb.driver.core/2.21.0/mongodb.driver.core.2.21.0.nupkg.sha512",
     "/home/weslen/.nuget/packages/mongodb.libmongocrypt/1.8.0/mongodb.libmongocrypt.1.8.0.nupkg.sha512",
     "/home/weslen/.nuget/packages/netstandard.library/1.6.1/netstandard.library.1.6.1.nupkg.sha512",
-    "/home/weslen/.nuget/packages/newtonsoft.json/11.0.2/newtonsoft.json.11.0.2.nupkg.sha512",
+    "/home/weslen/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
     "/home/weslen/.nuget/packages/newtonsoft.json.bson/1.0.1/newtonsoft.json.bson.1.0.1.nupkg.sha512",
     "/home/weslen/.nuget/packages/pipelines.sockets.unofficial/2.2.0/pipelines.sockets.unofficial.2.2.0.nupkg.sha512",
     "/home/weslen/.nuget/packages/runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl/4.3.0/runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

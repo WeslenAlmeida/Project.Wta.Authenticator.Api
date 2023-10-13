@@ -7,6 +7,6 @@ namespace CrossCutting.Configuration
         public static MongoSettings MongoSettings { get{ return new MongoSettings(); } }
         public static TokenConfiguration TokenConfiguration { get{ return new TokenConfiguration(); } }
         public static RedisSettings RedisSettings { get{ return new RedisSettings(); } }
-        public static AccessToken AccessToken { get{ return new AccessToken(); } }
+        public static ApiKey ApiKey { get{ return new ApiKey(); } }
     }
 }

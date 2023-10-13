@@ -8123,9 +8123,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Exception/Project.wta.Authenticator.CrossCutting.Exception.csproj",
-      "projectName": "Project.wta.Authenticator.CrossCutting.Exception",
-      "projectPath": "/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Exception/Project.wta.Authenticator.CrossCutting.Exception.csproj",
+      "projectUniqueName": "/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Exception/Project.Wta.Authenticator.CrossCutting.Exception.csproj",
+      "projectName": "Project.Wta.Authenticator.CrossCutting.Exception",
+      "projectPath": "/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Exception/Project.Wta.Authenticator.CrossCutting.Exception.csproj",
       "packagesPath": "/home/weslen/.nuget/packages/",
       "outputPath": "/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Exception/obj/",
       "projectStyle": "PackageReference",
@@ -8195,7 +8195,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.110/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.112/RuntimeIdentifierGraph.json"
       }
     }
   }

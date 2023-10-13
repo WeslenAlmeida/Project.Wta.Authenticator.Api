@@ -1530,15 +1530,15 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
-      "Newtonsoft.Json/11.0.2": {
+      "Newtonsoft.Json/13.0.3": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
         }
@@ -3390,7 +3390,7 @@
           "bin/placeholder/Project.Wta.Authenticator.CrossCutting.Configuration.dll": {}
         }
       },
-      "Project.wta.Authenticator.CrossCutting.Exception/1.0.0": {
+      "Project.Wta.Authenticator.CrossCutting.Exception/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -3402,10 +3402,10 @@
           "Microsoft.Extensions.Configuration.Json": "7.0.0"
         },
         "compile": {
-          "bin/placeholder/Project.wta.Authenticator.CrossCutting.Exception.dll": {}
+          "bin/placeholder/Project.Wta.Authenticator.CrossCutting.Exception.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Project.wta.Authenticator.CrossCutting.Exception.dll": {}
+          "bin/placeholder/Project.Wta.Authenticator.CrossCutting.Exception.dll": {}
         }
       },
       "Projetc.Wta.Authenticator.Domain/1.0.0": {
@@ -3416,8 +3416,9 @@
           "MediatR": "11.1.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
           "MongoDB.Driver": "2.21.0",
+          "Newtonsoft.Json": "13.0.3",
           "Project.Wta.Authenticator.CrossCutting.Configuration": "1.0.0",
-          "Project.wta.Authenticator.CrossCutting.Exception": "1.0.0",
+          "Project.Wta.Authenticator.CrossCutting.Exception": "1.0.0",
           "System.IdentityModel.Tokens.Jwt": "6.32.1"
         },
         "compile": {
@@ -5054,14 +5055,15 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/11.0.2": {
-      "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+    "Newtonsoft.Json/13.0.3": {
+      "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
       "type": "package",
-      "path": "newtonsoft.json/11.0.2",
+      "path": "newtonsoft.json/13.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
+        "README.md",
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
         "lib/net35/Newtonsoft.Json.dll",
@@ -5070,18 +5072,17 @@
         "lib/net40/Newtonsoft.Json.xml",
         "lib/net45/Newtonsoft.Json.dll",
         "lib/net45/Newtonsoft.Json.xml",
+        "lib/net6.0/Newtonsoft.Json.dll",
+        "lib/net6.0/Newtonsoft.Json.xml",
         "lib/netstandard1.0/Newtonsoft.Json.dll",
         "lib/netstandard1.0/Newtonsoft.Json.xml",
         "lib/netstandard1.3/Newtonsoft.Json.dll",
         "lib/netstandard1.3/Newtonsoft.Json.xml",
         "lib/netstandard2.0/Newtonsoft.Json.dll",
         "lib/netstandard2.0/Newtonsoft.Json.xml",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
-        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.11.0.2.nupkg.sha512",
-        "newtonsoft.json.nuspec"
+        "newtonsoft.json.13.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
       ]
     },
     "Newtonsoft.Json.Bson/1.0.1": {
@@ -9578,10 +9579,10 @@
       "path": "../CrossCutting.Configuration/Project.Wta.Authenticator.CrossCutting.Configuration.csproj",
       "msbuildProject": "../CrossCutting.Configuration/Project.Wta.Authenticator.CrossCutting.Configuration.csproj"
     },
-    "Project.wta.Authenticator.CrossCutting.Exception/1.0.0": {
+    "Project.Wta.Authenticator.CrossCutting.Exception/1.0.0": {
       "type": "project",
-      "path": "../CrossCutting.Exception/Project.wta.Authenticator.CrossCutting.Exception.csproj",
-      "msbuildProject": "../CrossCutting.Exception/Project.wta.Authenticator.CrossCutting.Exception.csproj"
+      "path": "../CrossCutting.Exception/Project.Wta.Authenticator.CrossCutting.Exception.csproj",
+      "msbuildProject": "../CrossCutting.Exception/Project.Wta.Authenticator.CrossCutting.Exception.csproj"
     },
     "Projetc.Wta.Authenticator.Domain/1.0.0": {
       "type": "project",
@@ -9657,7 +9658,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.110/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.112/RuntimeIdentifierGraph.json"
       }
     }
   }

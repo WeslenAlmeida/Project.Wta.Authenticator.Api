@@ -95,6 +95,7 @@
 /home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/bin/Debug/net7.0/MongoDB.Driver.dll
 /home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/bin/Debug/net7.0/MongoDB.Driver.Core.dll
 /home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/bin/Debug/net7.0/MongoDB.Libmongocrypt.dll
+/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/bin/Debug/net7.0/Moq.dll
 /home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/bin/Debug/net7.0/Newtonsoft.Json.dll
 /home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/bin/Debug/net7.0/Newtonsoft.Json.Bson.dll
 /home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/bin/Debug/net7.0/NSubstitute.dll
@@ -194,7 +195,7 @@
 /home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/bin/Debug/net7.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
 /home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/bin/Debug/net7.0/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll
 /home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/bin/Debug/net7.0/Project.Wta.Authenticator.CrossCutting.Configuration.dll
-/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/bin/Debug/net7.0/Project.wta.Authenticator.CrossCutting.Exception.dll
+/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/bin/Debug/net7.0/Project.Wta.Authenticator.CrossCutting.Exception.dll
 /home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/bin/Debug/net7.0/Project.Wta.Authenticator.Infrastructure.Cache.dll
 /home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/bin/Debug/net7.0/Project.Wta.Authenticator.Infrastructure.Data.dll
 /home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/bin/Debug/net7.0/Projetc.Wta.Authenticator.Domain.dll
@@ -202,7 +203,7 @@
 /home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/bin/Debug/net7.0/Project.Wta.Authenticator.Infrastructure.Data.pdb
 /home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/bin/Debug/net7.0/Project.Wta.Authenticator.Infrastructure.Cache.pdb
 /home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/bin/Debug/net7.0/Project.Wta.Authenticator.CrossCutting.Configuration.pdb
-/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/bin/Debug/net7.0/Project.wta.Authenticator.CrossCutting.Exception.pdb
+/home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/bin/Debug/net7.0/Project.Wta.Authenticator.CrossCutting.Exception.pdb
 /home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/obj/Debug/net7.0/Project.Wta.Authenticator.Tests.Shared.csproj.AssemblyReference.cache
 /home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/obj/Debug/net7.0/Project.Wta.Authenticator.Tests.Shared.GeneratedMSBuildEditorConfig.editorconfig
 /home/workspace/Project.Wta.Authenticator.Api/src/Tests.Shared/obj/Debug/net7.0/Project.Wta.Authenticator.Tests.Shared.AssemblyInfoInputs.cache

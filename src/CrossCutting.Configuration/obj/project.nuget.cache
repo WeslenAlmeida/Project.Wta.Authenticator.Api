@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "q2YAcwbCGsvmdS468A5E3F2D7E+u9PIzLNGmT++HBdztnCejK7SFg356ZBoMkCXGlApNRrRcGop6Ic+ULHGWgA==",
+  "dgSpecHash": "/QyRygvRt7+LF2EP85tgAz0QGyXD+TuotwUFaVGgKw9ZeQXg4mkd/QksDItt78qgd6LaABVcgfUR73A3wipjOQ==",
   "success": true,
   "projectFilePath": "/home/workspace/Project.Wta.Authenticator.Api/src/CrossCutting.Configuration/Project.Wta.Authenticator.CrossCutting.Configuration.csproj",
   "expectedPackageFiles": [

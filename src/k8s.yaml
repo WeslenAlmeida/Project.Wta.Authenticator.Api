@@ -1,46 +1,162 @@
 apiVersion: v1
-kind: Service
+kind: Namespace
 metadata:
-  name: project-auth-svc
-spec:
-  selector:
-    app: project-auth
-  type: LoadBalancer
-  ports:
-  - port: 80
-    targetPort: 80
----
+  name: project-wta
+---         
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: project-auth
+  name: project-wta-redis-dep
+  namespace: project-wta
+  labels:
+    app: project-wta-redis
+    role: leader
+    tier: backend
 spec:
+  replicas: 1
   selector:
     matchLabels:
-      app: project-auth
+      app: project-wta-redis
   template:
     metadata:
       labels:
-        app: project-auth
+        app: project-wta-redis
+        role: leader
+        tier: backend
     spec:
       containers:
-      - name: project-auth
-        image: weslenalmeida/project-auth:dev
+      - name: leader
+        image: "redis:latest"
         resources:
+          requests:
+            cpu: 30m
+            memory: 30Mi
           limits:
-            memory: "128Mi"
-            cpu: "500m"
+            cpu: 150m
+            memory: 150Mi
         ports:
-        - containerPort: 80
+        - containerPort: 6379
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: project-wta-redis-svc
+  namespace: project-wta
+  labels:
+    app: project-wta-redis
+    role: leader
+    tier: backend
+spec:
+  ports:
+  - name: project-wta-redis
+    protocol: TCP
+    port: 6379
+    targetPort: 6379
+  selector:
+    app: project-wta-redis
+    role: leader
+    tier: backend
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: project-wta
+  namespace: project-wta
+spec:
+  selector:
+    app: project-wta
+  type: LoadBalancer
+  sessionAffinity: None
+  sessionAffinityConfig:
+    clientIP:
+      timeoutSeconds: 10800
+  ports:
+  - name: project-wta
+    protocol: TCP
+    port: 80
+    targetPort: 80
+---    
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  project-wta-auth-api
+  namespace: project-wta
+  labels:
+    app:  project-wta
+spec:
+  selector:
+    matchLabels:
+      app: project-wta
+  template:
+    metadata:
+      labels:
+        app:  project-wta
+    spec:
+      containers:
+      - name:  project-wta-api
+        image:  weslenalmeida/project-authentication:dev
+        ports:
+          - containerPort: 80
         env:
           - name: MongoSettings__DatabaseName
             value: "WtaManagementCars"
           - name: MongoSettings__ConnectionString
-            value: "mongodb://localhost:27017"  
+            value: "mongodb://192.168.59.100:27017"
+          - name: RedisSettings__ConnectionString
+            value: "project-wta-redis-svc"
+          - name: Authorization__ApiKey
+            value: "3a20b0d9-d576-4300-b5be-f4f23664feee"            
+        resources:
+          requests:
+            cpu: 30m
+            memory: 30Mi
+          limits:
+            cpu: 150m
+            memory: 150Mi
+        livenessProbe:
+          tcpSocket:
+            port: 80
+          initialDelaySeconds: 5
+          timeoutSeconds: 5
+          successThreshold: 1
+          failureThreshold: 3
+          periodSeconds: 10    
+        terminationMessagePath: /local/termination-log
+        terminationMessagePolicy: File
+        imagePullPolicy: Always
+      restartPolicy: Always
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 25%
+      maxSurge: 25%    
 ---
-apiVersion: v1
-kind: Namespace
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
 metadata:
-  name:  default 
+  name: project-wta
+  namespace: project-wta
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: project-wta
+  minReplicas: 1
+  maxReplicas: 5
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 60
 
 
+ 
+ 
+
+    
+
+    
+    
+      

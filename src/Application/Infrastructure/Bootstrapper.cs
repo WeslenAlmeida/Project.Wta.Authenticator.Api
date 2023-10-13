@@ -1,4 +1,6 @@
+using System.Reflection;
 using CrossCutting.Configuration;
+using Domain.Commands.v1.GenerateToken;
 using Domain.Interfaces.v1;
 using Infrastructure.Cache.v1;
 using Infrastructure.Data.v1.Mongo;
@@ -11,6 +13,7 @@ namespace Application.Infrastructure
           public Bootstrapper(IServiceCollection services)
         {
             InjectScoped(services);
+            InjectLogger(services);
             InjectMediator(services);
             InjectAutoMapper(services);
             InjectRedisService(services);
@@ -39,6 +42,11 @@ namespace Application.Infrastructure
                 cache.InstanceName = "Authentication.Api";
                 cache.Configuration = AppSettings.RedisSettings.ConnectionString;
             });
+        }
+
+         private static void InjectLogger(IServiceCollection services)
+        {
+            services.AddLogging();
         }
     }
 }

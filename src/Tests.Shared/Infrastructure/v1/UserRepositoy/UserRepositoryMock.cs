@@ -12,14 +12,14 @@ namespace Tests.Shared.Infrastructure.v1.UserRepositoy
         [SetUp]
         public IUserRepository SetUpSuccess()
         {
-            mock.CheckUser("teste").ReturnsForAnyArgs(UserEntityMock.GetDefault());
+            mock.CheckUser("teste").ReturnsForAnyArgs(true);
             return mock;
         }
 
         [SetUp]
         public IUserRepository SetUpFailed()
         {
-            mock.CheckUser("teste").ReturnsForAnyArgs(UserEntityMock.GetFailed());
+            mock.CheckUser("teste").ReturnsForAnyArgs(false);
             return mock;    
         }
     }
