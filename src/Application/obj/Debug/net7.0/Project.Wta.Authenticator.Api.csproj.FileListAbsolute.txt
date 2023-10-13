@@ -61,6 +61,7 @@
 /home/workspace/Project.Wta.Authenticator.Api/src/Application/bin/Debug/net7.0/MongoDB.Driver.dll
 /home/workspace/Project.Wta.Authenticator.Api/src/Application/bin/Debug/net7.0/MongoDB.Driver.Core.dll
 /home/workspace/Project.Wta.Authenticator.Api/src/Application/bin/Debug/net7.0/MongoDB.Libmongocrypt.dll
+/home/workspace/Project.Wta.Authenticator.Api/src/Application/bin/Debug/net7.0/Moq.dll
 /home/workspace/Project.Wta.Authenticator.Api/src/Application/bin/Debug/net7.0/Microsoft.VisualStudio.TestPlatform.TestFramework.dll
 /home/workspace/Project.Wta.Authenticator.Api/src/Application/bin/Debug/net7.0/Newtonsoft.Json.dll
 /home/workspace/Project.Wta.Authenticator.Api/src/Application/bin/Debug/net7.0/Newtonsoft.Json.Bson.dll

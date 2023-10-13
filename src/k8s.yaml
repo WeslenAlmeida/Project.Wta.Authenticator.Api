@@ -2,11 +2,11 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: project-wta
----
+---         
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: project-wta-redis
+  name: project-wta-redis-dep
   namespace: project-wta
   labels:
     app: project-wta-redis
@@ -40,7 +40,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: project-wta-redis
+  name: project-wta-redis-svc
   namespace: project-wta
   labels:
     app: project-wta-redis
@@ -101,13 +101,11 @@ spec:
           - name: MongoSettings__DatabaseName
             value: "WtaManagementCars"
           - name: MongoSettings__ConnectionString
-            value: "mongodb://localhost:27017"
-          - name: RedisSettings__TimeExpiration
-            value: "3600"
+            value: "mongodb://192.168.59.100:27017"
           - name: RedisSettings__ConnectionString
-            value: "http://project-wta-redis"
+            value: "project-wta-redis-svc"
           - name: Authorization__ApiKey
-            value: "3a20b0d9-d576-4300-b5be-f4f23664feee"             
+            value: "3a20b0d9-d576-4300-b5be-f4f23664feee"            
         resources:
           requests:
             cpu: 30m

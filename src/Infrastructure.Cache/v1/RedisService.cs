@@ -13,7 +13,7 @@ namespace Infrastructure.Cache.v1
             _cache = cache;
             _options = new DistributedCacheEntryOptions
             {
-                SlidingExpiration = TimeSpan.FromSeconds(int.Parse(AppSettings.RedisSettings.TimeExpiration!)),
+                SlidingExpiration = TimeSpan.FromSeconds(Double.Parse(AppSettings.RedisSettings.TimeExpiration!)),
             };
         }
         public async Task<string> GetAsync(string key)

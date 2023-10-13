@@ -1,5 +1,7 @@
 using CrossCutting.Exception.CustomExceptions;
 using Domain.Commands.v1.GenerateToken;
+using Microsoft.Extensions.Logging;
+using Moq;
 using NUnit.Framework;
 using Tests.Shared.Commands.v1.GenerateToken;
 using Tests.Shared.Infrastructure.v1.Redis;
@@ -14,7 +16,8 @@ namespace Tests.Unity.Domain.CommandsHandler.v1.GenerateToken
         {
             return new GenerateTokenCommandHandler(
                 new UserRepositoryMock().SetUpSuccess(),
-                new RedisMock().SetUpSuccess()
+                new RedisMock().SetUpSuccess(),
+                new Mock<Logger<GenerateTokenCommandHandler>>().Object
             );
         }
 
@@ -22,7 +25,8 @@ namespace Tests.Unity.Domain.CommandsHandler.v1.GenerateToken
         {
             return new GenerateTokenCommandHandler(
                 new UserRepositoryMock().SetUpFailed(),
-                new RedisMock().SetUpFailed()
+                new RedisMock().SetUpFailed(),
+                new Mock<Logger<GenerateTokenCommandHandler>>().Object
             );
         }
 
