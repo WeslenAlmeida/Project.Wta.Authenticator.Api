@@ -18,7 +18,6 @@ namespace Domain.Commands.v1.GenerateToken
         private readonly TokenConfiguration _tokenConfiguration;
         private readonly IUserRepository _user; 
         private readonly IRedisService _redis;
-        private readonly string? _apikey;
         private readonly ILogger<GenerateTokenCommandHandler> _logger;
 
         public GenerateTokenCommandHandler(IUserRepository userRepository, IRedisService redis, ILogger<GenerateTokenCommandHandler> logger)
