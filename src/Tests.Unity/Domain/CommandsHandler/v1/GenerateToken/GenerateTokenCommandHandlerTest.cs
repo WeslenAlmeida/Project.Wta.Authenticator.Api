@@ -17,7 +17,7 @@ namespace Tests.Unity.Domain.CommandsHandler.v1.GenerateToken
             return new GenerateTokenCommandHandler(
                 new UserRepositoryMock().SetUpSuccess(),
                 new RedisMock().SetUpSuccess(),
-                new Mock<Logger<GenerateTokenCommandHandler>>().Object
+                new Mock<ILogger<GenerateTokenCommandHandler>>().Object
             );
         }
 
@@ -26,7 +26,7 @@ namespace Tests.Unity.Domain.CommandsHandler.v1.GenerateToken
             return new GenerateTokenCommandHandler(
                 new UserRepositoryMock().SetUpFailed(),
                 new RedisMock().SetUpFailed(),
-                new Mock<Logger<GenerateTokenCommandHandler>>().Object
+                new Mock<ILogger<GenerateTokenCommandHandler>>().Object
             );
         }
 

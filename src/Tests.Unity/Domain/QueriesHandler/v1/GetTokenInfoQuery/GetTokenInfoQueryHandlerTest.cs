@@ -15,7 +15,7 @@ namespace Tests.Unity.Domain.CommandsHandler.v1.GenerateToken
         {
             return new GetTokenInfoQueryHandler(
                 new RedisMock().SetUpSuccessTokenInfo(),
-                new Mock<Logger<GetTokenInfoQueryHandler>>().Object
+                new Mock<ILogger<GetTokenInfoQueryHandler>>().Object
             );
         }
 
@@ -23,7 +23,7 @@ namespace Tests.Unity.Domain.CommandsHandler.v1.GenerateToken
         {
             return new GetTokenInfoQueryHandler(
                 new RedisMock().SetUpFailed(),
-                new Mock<Logger<GetTokenInfoQueryHandler>>().Object
+                new Mock<ILogger<GetTokenInfoQueryHandler>>().Object
             );
         }
 

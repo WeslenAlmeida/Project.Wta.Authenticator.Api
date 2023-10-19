@@ -20,7 +20,7 @@ namespace Tests.Shared.Infrastructure.v1.Redis
         [SetUp]
         public IRedisService SetUpSuccessTokenInfo()
         {
-            mock.GetAsync("teste").ReturnsForAnyArgs(JsonConvert.SerializeObject(new GetTokenInfoQueryResponse("teste", DateTime.Now)));
+            mock.GetAsync("teste").ReturnsForAnyArgs(JsonConvert.SerializeObject(new {Email = "teste", ExpirationDate = DateTime.UtcNow}));
             return mock;
         }
 
