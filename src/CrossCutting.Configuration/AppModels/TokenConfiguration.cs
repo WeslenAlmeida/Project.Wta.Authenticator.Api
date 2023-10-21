@@ -18,6 +18,14 @@ namespace CrossCutting.Configuration.AppModels
             }
         }
 
+         public string? Key 
+         { 
+            get
+            {
+                return ConfigurationAppSettings.Builder()["TokenConfiguration:Key"];
+            }
+        }
+
          public string? Seconds 
          { 
             get

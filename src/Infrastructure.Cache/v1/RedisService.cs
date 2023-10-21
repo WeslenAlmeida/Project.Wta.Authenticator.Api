@@ -1,5 +1,4 @@
 using CrossCutting.Configuration;
-using CrossCutting.Exception.CustomExceptions;
 using Domain.Interfaces.v1;
 using Microsoft.Extensions.Caching.Distributed;
 
@@ -19,7 +18,7 @@ namespace Infrastructure.Cache.v1
         }
         public async Task<string> GetAsync(string key)
         {
-            return await _cache.GetStringAsync(key) ?? throw new TokenNotFoundException();
+            return await _cache.GetStringAsync(key)!;
         }
 
         public async Task SetAsync(string key, string value)

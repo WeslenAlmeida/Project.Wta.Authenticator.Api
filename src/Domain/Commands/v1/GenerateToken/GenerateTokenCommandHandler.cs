@@ -9,24 +9,30 @@ using CrossCutting.Exception.CustomExceptions;
 using Newtonsoft.Json;
 using Domain.Models.v1;
 using Microsoft.Extensions.Logging;
+using System.Text;
+using CrossCutting.Configuration;
 
 namespace Domain.Commands.v1.GenerateToken
 {
     public class GenerateTokenCommandHandler : IRequestHandler<GenerateTokenCommand, GenerateTokenCommandResponse>
     {
-        private readonly SigningConfiguration _signingConfiguration;
-        private readonly TokenConfiguration _tokenConfiguration;
         private readonly IUserRepository _user; 
         private readonly IRedisService _redis;
+        private readonly string _key;
+        private readonly string _audience;
+        private readonly string _issuer;
+        private readonly int _expirationTime;
         private readonly ILogger<GenerateTokenCommandHandler> _logger;
 
         public GenerateTokenCommandHandler(IUserRepository userRepository, IRedisService redis, ILogger<GenerateTokenCommandHandler> logger)
         {
             _logger = logger;
-            _signingConfiguration = new SigningConfiguration();
-            _tokenConfiguration = new TokenConfiguration();
             _user = userRepository;
             _redis = redis;
+            _key = AppSettings.TokenConfiguration.Key!;
+            _audience = AppSettings.TokenConfiguration.Audience!;
+            _issuer = AppSettings.TokenConfiguration.Issuer!;
+            _expirationTime = int.Parse(AppSettings.TokenConfiguration.Seconds!);
         }
 
         public async Task<GenerateTokenCommandResponse> Handle(GenerateTokenCommand request, CancellationToken cancellationToken)
@@ -57,8 +63,9 @@ namespace Domain.Commands.v1.GenerateToken
             );
 
             var createDate = DateTime.UtcNow;
-            var expirationDate = createDate.AddSeconds(_tokenConfiguration.Seconds);
-            var token = CreateToken(identity, createDate, expirationDate);
+            var key = Encoding.ASCII.GetBytes(_key);
+            var expirationDate = createDate.AddSeconds(_expirationTime);
+            var token = CreateToken(identity, createDate, expirationDate, key);
 
             await _redis.SetAsync(token, JsonConvert.SerializeObject(new TokenData(request.Email!, expirationDate)));
 
@@ -67,16 +74,16 @@ namespace Domain.Commands.v1.GenerateToken
             return SuccessObject(token);
         }
 
-        private string CreateToken(ClaimsIdentity claimsIdentity, DateTime createDate, DateTime expirationDate)
+        private string CreateToken(ClaimsIdentity claimsIdentity, DateTime createDate, DateTime expirationDate, byte[] key)
         {
             var jwtSecurityTokenHandler = new JwtSecurityTokenHandler();
             var securityToken = jwtSecurityTokenHandler.CreateToken
             (
                 new SecurityTokenDescriptor()
                 {
-                    Issuer = _tokenConfiguration.Issuer,
-                    Audience = _tokenConfiguration.Audience,
-                    SigningCredentials = _signingConfiguration.SigningCredentials,
+                    Issuer = _issuer,
+                    Audience = _audience,
+                    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
                     Subject = claimsIdentity,
                     NotBefore = createDate,
                     Expires = expirationDate,
