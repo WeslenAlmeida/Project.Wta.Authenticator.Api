@@ -6,7 +6,7 @@ metadata:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: project-wta-redis-dep
+  name: project-wta-aut-redis-dep
   namespace: project-wta
   labels:
     app: project-wta-redis
@@ -40,7 +40,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: project-wta-redis-svc
+  name: project-wta-aut-redis-svc
   namespace: project-wta
   labels:
     app: project-wta-redis
@@ -48,19 +48,19 @@ metadata:
     tier: backend
 spec:
   ports:
-  - name: project-wta-redis
+  - name: project-wta-aut-redis
     protocol: TCP
     port: 6379
     targetPort: 6379
   selector:
-    app: project-wta-redis
+    app: project-wta-aut-redis
     role: leader
     tier: backend
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: project-wta
+  name: project-wta-aut-api-svc
   namespace: project-wta
 spec:
   selector:
@@ -79,7 +79,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name:  project-wta-auth-api
+  name:  project-wta-aut-api-dep
   namespace: project-wta
   labels:
     app:  project-wta
@@ -93,7 +93,7 @@ spec:
         app:  project-wta
     spec:
       containers:
-      - name:  project-wta-api
+      - name:  project-wta-aut-api
         image:  weslenalmeida/project-authentication:dev
         ports:
           - containerPort: 80
@@ -134,7 +134,7 @@ spec:
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: project-wta
+  name: project-wta-aut-api-hpa
   namespace: project-wta
 spec:
   scaleTargetRef:
