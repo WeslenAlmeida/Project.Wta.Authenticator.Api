@@ -18,6 +18,7 @@
                 "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
                 "uriFormat": "http://localhost:%s/swagger/index.html"
             },
+            "requireExactSource": false,
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development"
             },

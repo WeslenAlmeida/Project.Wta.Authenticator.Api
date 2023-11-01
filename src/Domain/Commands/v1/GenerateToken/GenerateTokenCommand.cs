@@ -8,5 +8,8 @@ namespace Domain.Commands.v1.GenerateToken
         [Required]
         [DataType(DataType.EmailAddress, ErrorMessage = "Input invalid email!")]
         public string? Email { get; set; }
+
+        [Required]
+        public string? Password { get; set; }
     }
 }

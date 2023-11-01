@@ -4,10 +4,13 @@ namespace Domain.Entities
 {
     public class UserEntity 
     {
-         [BsonElement("id")]
+        [BsonElement("id")]
         public Guid Id { get; set; }
 
-         [BsonElement("email")]
+        [BsonElement("email")]
         public string? Email { get; set; }
+
+        [BsonElement("password")]
+        public string? password { get; set; }
     }
 }

@@ -6,7 +6,7 @@
     },
     {
       "key": "UserNotFoundException",
-      "value": "Invalid email!"
+      "value": "Invalid email or password!"
     },
     {
       "key": "UnauthorizedException",

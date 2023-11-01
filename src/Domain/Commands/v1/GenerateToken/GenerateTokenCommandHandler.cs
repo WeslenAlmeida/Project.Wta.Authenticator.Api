@@ -39,26 +39,21 @@ namespace Domain.Commands.v1.GenerateToken
         {
             _logger.LogInformation("Start GenerateTokenCommandHandler");
 
-            var email = await _redis.GetAsync(request.Email!);
-
-            if(string.IsNullOrEmpty(email))
             {
-                if(await _user.CheckUser(request.Email!))
+                if(!await _user.CheckUser(request.Email!, request.Password!))
                 {
-                    await _redis.SetAsync(request.Email!, request.Email!);
-                    email = request.Email;
-                }    
-                else
                     throw new UserNotFoundException();    
+                }    
+                    
             }
 
             var identity = new ClaimsIdentity
             (
-                new GenericIdentity(email!),
+                new GenericIdentity(request.Email!),
                 new[]
                 {
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),  
-                    new Claim(JwtRegisteredClaimNames.UniqueName, email!)
+                    new Claim(JwtRegisteredClaimNames.UniqueName, request.Email!)
                 }
             );
 
