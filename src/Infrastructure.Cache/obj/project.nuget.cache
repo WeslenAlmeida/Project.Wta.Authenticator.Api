@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nkoA/nMyX/EBQ7BHjzRDXHOXtT/RGAqiDuCBvvXEFOzVFM6DibCj6jofS1E0oNzJmoQXoOADnJEn9zRz1+euvg==",
+  "dgSpecHash": "hVnEeFjUQVIfyhFLFSbd/7OIY8gz/ycKk6XA9hU5lh27htH3TzV85i7VJkkG2TjVGTcHHNfSjvt+o5uBclYTzw==",
   "success": true,
   "projectFilePath": "/home/workspace/Project.Wta.Authenticator.Api/src/Infrastructure.Cache/Project.Wta.Authenticator.Infrastructure.Cache.csproj",
   "expectedPackageFiles": [
@@ -51,7 +51,7 @@
     "/home/weslen/.nuget/packages/microsoft.dotnet.platformabstractions/2.1.0/microsoft.dotnet.platformabstractions.2.1.0.nupkg.sha512",
     "/home/weslen/.nuget/packages/microsoft.extensions.caching.abstractions/7.0.0/microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "/home/weslen/.nuget/packages/microsoft.extensions.caching.memory/2.2.0/microsoft.extensions.caching.memory.2.2.0.nupkg.sha512",
-    "/home/weslen/.nuget/packages/microsoft.extensions.caching.stackexchangeredis/7.0.10/microsoft.extensions.caching.stackexchangeredis.7.0.10.nupkg.sha512",
+    "/home/weslen/.nuget/packages/microsoft.extensions.caching.stackexchangeredis/7.0.2/microsoft.extensions.caching.stackexchangeredis.7.0.2.nupkg.sha512",
     "/home/weslen/.nuget/packages/microsoft.extensions.configuration/7.0.0/microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "/home/weslen/.nuget/packages/microsoft.extensions.configuration.abstractions/7.0.0/microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
     "/home/weslen/.nuget/packages/microsoft.extensions.configuration.binder/7.0.4/microsoft.extensions.configuration.binder.7.0.4.nupkg.sha512",
@@ -68,9 +68,9 @@
     "/home/weslen/.nuget/packages/microsoft.extensions.hosting.abstractions/2.2.0/microsoft.extensions.hosting.abstractions.2.2.0.nupkg.sha512",
     "/home/weslen/.nuget/packages/microsoft.extensions.localization/2.2.0/microsoft.extensions.localization.2.2.0.nupkg.sha512",
     "/home/weslen/.nuget/packages/microsoft.extensions.localization.abstractions/2.2.0/microsoft.extensions.localization.abstractions.2.2.0.nupkg.sha512",
-    "/home/weslen/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.1/microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
+    "/home/weslen/.nuget/packages/microsoft.extensions.logging.abstractions/7.0.0/microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "/home/weslen/.nuget/packages/microsoft.extensions.objectpool/2.2.0/microsoft.extensions.objectpool.2.2.0.nupkg.sha512",
-    "/home/weslen/.nuget/packages/microsoft.extensions.options/7.0.1/microsoft.extensions.options.7.0.1.nupkg.sha512",
+    "/home/weslen/.nuget/packages/microsoft.extensions.options/7.0.0/microsoft.extensions.options.7.0.0.nupkg.sha512",
     "/home/weslen/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "/home/weslen/.nuget/packages/microsoft.extensions.webencoders/2.2.0/microsoft.extensions.webencoders.2.2.0.nupkg.sha512",
     "/home/weslen/.nuget/packages/microsoft.identitymodel.abstractions/6.32.1/microsoft.identitymodel.abstractions.6.32.1.nupkg.sha512",

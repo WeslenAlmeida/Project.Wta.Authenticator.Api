@@ -1,10 +1,12 @@
 using Application.Infrastructure;
+using CrossCutting.Configuration;
+using Domain.Shared.v1.Authorization;
 
 var builder = WebApplication.CreateBuilder(args);
 
 var bootstrapper = new Bootstrapper(builder.Services);
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(options => options.Filters.Add(new RestrictDomainAttribute(AppSettings.DomainsAllowed.Domains!)));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

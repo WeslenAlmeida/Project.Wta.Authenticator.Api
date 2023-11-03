@@ -1,6 +1,5 @@
 using System.Security.Principal;
 using System.Security.Claims;
-using Domain.Security;
 using MediatR;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
@@ -11,6 +10,7 @@ using Domain.Models.v1;
 using Microsoft.Extensions.Logging;
 using System.Text;
 using CrossCutting.Configuration;
+using Domain.Security;
 
 namespace Domain.Commands.v1.GenerateToken
 {
@@ -39,14 +39,14 @@ namespace Domain.Commands.v1.GenerateToken
         {
             _logger.LogInformation("Start GenerateTokenCommandHandler");
 
-            {
-                if(!await _user.CheckUser(request.Email!, request.Password!))
-                {
-                    throw new UserNotFoundException();    
-                }    
-                    
-            }
 
+            _logger.LogInformation("Check credentials in database");
+            if(!await _user.CheckUser(request.Email!, Cryptography.HashMd5(request.Password!)))
+            {
+                    throw new UserNotFoundException();    
+            }    
+            
+            _logger.LogInformation("Start to create token");
             var identity = new ClaimsIdentity
             (
                 new GenericIdentity(request.Email!),
@@ -62,6 +62,7 @@ namespace Domain.Commands.v1.GenerateToken
             var expirationDate = createDate.AddSeconds(_expirationTime);
             var token = CreateToken(identity, createDate, expirationDate, key);
 
+            _logger.LogInformation("Save token in cache");
             await _redis.SetAsync(token, JsonConvert.SerializeObject(new TokenData(request.Email!, expirationDate)));
 
             _logger.LogInformation("End GenerateTokenCommandHandler");

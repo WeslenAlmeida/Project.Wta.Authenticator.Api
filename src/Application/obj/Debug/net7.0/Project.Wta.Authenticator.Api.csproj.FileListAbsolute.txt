@@ -41,8 +41,6 @@
 /home/workspace/Project.Wta.Authenticator.Api/src/Application/bin/Debug/net7.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll
 /home/workspace/Project.Wta.Authenticator.Api/src/Application/bin/Debug/net7.0/Microsoft.Extensions.Configuration.Binder.dll
 /home/workspace/Project.Wta.Authenticator.Api/src/Application/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
-/home/workspace/Project.Wta.Authenticator.Api/src/Application/bin/Debug/net7.0/Microsoft.Extensions.Logging.Abstractions.dll
-/home/workspace/Project.Wta.Authenticator.Api/src/Application/bin/Debug/net7.0/Microsoft.Extensions.Options.dll
 /home/workspace/Project.Wta.Authenticator.Api/src/Application/bin/Debug/net7.0/Microsoft.IdentityModel.Abstractions.dll
 /home/workspace/Project.Wta.Authenticator.Api/src/Application/bin/Debug/net7.0/Microsoft.IdentityModel.JsonWebTokens.dll
 /home/workspace/Project.Wta.Authenticator.Api/src/Application/bin/Debug/net7.0/Microsoft.IdentityModel.Logging.dll
