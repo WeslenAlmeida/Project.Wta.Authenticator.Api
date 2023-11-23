@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "hVnEeFjUQVIfyhFLFSbd/7OIY8gz/ycKk6XA9hU5lh27htH3TzV85i7VJkkG2TjVGTcHHNfSjvt+o5uBclYTzw==",
+  "dgSpecHash": "4gT5bCSxE0y5kw2SjLJHrlibIAgM8hL3YDfAQAu7O6CkJ9zGx9iFr2SlHm8bvVmJuPNsHyNI7ooRLl5kCkkE2g==",
   "success": true,
   "projectFilePath": "/home/workspace/Project.Wta.Authenticator.Api/src/Infrastructure.Cache/Project.Wta.Authenticator.Infrastructure.Cache.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,8 @@
     "/home/weslen/.nuget/packages/awssdk.core/3.7.100.14/awssdk.core.3.7.100.14.nupkg.sha512",
     "/home/weslen/.nuget/packages/awssdk.securitytoken/3.7.100.14/awssdk.securitytoken.3.7.100.14.nupkg.sha512",
     "/home/weslen/.nuget/packages/dnsclient/1.6.1/dnsclient.1.6.1.nupkg.sha512",
+    "/home/weslen/.nuget/packages/fluentvalidation/11.8.1/fluentvalidation.11.8.1.nupkg.sha512",
+    "/home/weslen/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.8.1/fluentvalidation.dependencyinjectionextensions.11.8.1.nupkg.sha512",
     "/home/weslen/.nuget/packages/mediatr/11.1.0/mediatr.11.1.0.nupkg.sha512",
     "/home/weslen/.nuget/packages/mediatr.contracts/1.0.1/mediatr.contracts.1.0.1.nupkg.sha512",
     "/home/weslen/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/11.1.0/mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",

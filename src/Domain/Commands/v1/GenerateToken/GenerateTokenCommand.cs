@@ -1,15 +1,9 @@
-using System.ComponentModel.DataAnnotations;
-using MediatR;
-
+using Domain.Interfaces.v1;
 namespace Domain.Commands.v1.GenerateToken
 {
-    public class GenerateTokenCommand : IRequest<GenerateTokenCommandResponse>
+    public class GenerateTokenCommand : ITokenRequest<GenerateTokenCommandResponse>
     {
-        [Required]
-        [DataType(DataType.EmailAddress, ErrorMessage = "Input invalid email!")]
         public string? Email { get; set; }
-
-        [Required]
         public string? Password { get; set; } 
     }
 }

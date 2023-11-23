@@ -10,5 +10,11 @@ namespace CrossCutting.Exception
             StatusCode = statusCode;
             CustomMessage = ConfigurationResources.GetExceptionMessage(customException);
         }
+
+        public BaseException(int statuscode, object message)
+        {
+            StatusCode= statuscode; 
+            CustomMessage= message;
+        }
     }
 }

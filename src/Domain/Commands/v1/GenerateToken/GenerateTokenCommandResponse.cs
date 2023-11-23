@@ -1,4 +1,4 @@
-namespace Domain.Commands.v1
+namespace Domain.Commands.v1.GenerateToken
 {
     public class GenerateTokenCommandResponse
     {

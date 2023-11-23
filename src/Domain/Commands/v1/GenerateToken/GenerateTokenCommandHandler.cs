@@ -41,10 +41,10 @@ namespace Domain.Commands.v1.GenerateToken
 
 
             _logger.LogInformation("Check credentials in database");
-            if(!await _user.CheckUser(request.Email!, Cryptography.HashMd5(request.Password!)))
-            {
-                    throw new UserNotFoundException();    
-            }    
+            //if(!await _user.CheckUser(request.Email!, Cryptography.HashMd5(request.Password!)))
+            //{
+            //        throw new UserNotFoundException();    
+            //}    
             
             _logger.LogInformation("Start to create token");
             var identity = new ClaimsIdentity
@@ -63,7 +63,7 @@ namespace Domain.Commands.v1.GenerateToken
             var token = CreateToken(identity, createDate, expirationDate, key);
 
             _logger.LogInformation("Save token in cache");
-            await _redis.SetAsync(token, JsonConvert.SerializeObject(new TokenData(request.Email!, expirationDate)));
+            //await _redis.SetAsync(token, JsonConvert.SerializeObject(new TokenData(request.Email!, expirationDate)));
 
             _logger.LogInformation("End GenerateTokenCommandHandler");
             
