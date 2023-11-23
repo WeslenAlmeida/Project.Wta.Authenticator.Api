@@ -11,6 +11,8 @@ using Microsoft.Extensions.Logging;
 using System.Text;
 using CrossCutting.Configuration;
 using Domain.Security;
+using Domain.Entities.v1;
+using Domain.Fixed;
 
 namespace Domain.Commands.v1.GenerateToken
 {
@@ -39,35 +41,27 @@ namespace Domain.Commands.v1.GenerateToken
         {
             _logger.LogInformation("Start GenerateTokenCommandHandler");
 
-
-            _logger.LogInformation("Check credentials in database");
-            //if(!await _user.CheckUser(request.Email!, Cryptography.HashMd5(request.Password!)))
-            //{
-            //        throw new UserNotFoundException();    
-            //}    
-            
-            _logger.LogInformation("Start to create token");
-            var identity = new ClaimsIdentity
-            (
-                new GenericIdentity(request.Email!),
-                new[]
-                {
-                    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),  
-                    new Claim(JwtRegisteredClaimNames.UniqueName, request.Email!)
-                }
-            );
+            var user = await _user.GetUser(request.Email!, Cryptography.HashMd5(request.Password!)) ?? throw new UserNotFoundException();
 
             var createDate = DateTime.UtcNow;
-            var key = Encoding.ASCII.GetBytes(_key);
             var expirationDate = createDate.AddSeconds(_expirationTime);
-            var token = CreateToken(identity, createDate, expirationDate, key);
+            
+            var token = CreateToken(
+                GetClaimsIdentity(user),
+                createDate,
+                expirationDate,
+                Encoding.ASCII.GetBytes(_key));
 
-            _logger.LogInformation("Save token in cache");
-            //await _redis.SetAsync(token, JsonConvert.SerializeObject(new TokenData(request.Email!, expirationDate)));
+            await _redis.SetAsync(token, JsonConvert.SerializeObject(new TokenData(request.Email!, expirationDate)));
 
             _logger.LogInformation("End GenerateTokenCommandHandler");
             
-            return SuccessObject(token);
+            return new GenerateTokenCommandResponse()
+                {
+                    Authenticated = true,
+                    Message = "Success !!!",
+                    AccessToken = token
+                };
         }
 
         private string CreateToken(ClaimsIdentity claimsIdentity, DateTime createDate, DateTime expirationDate, byte[] key)
@@ -89,14 +83,17 @@ namespace Domain.Commands.v1.GenerateToken
             return jwtSecurityTokenHandler.WriteToken(securityToken);
         }
 
-        private static GenerateTokenCommandResponse SuccessObject(string token)
+        private ClaimsIdentity GetClaimsIdentity(UserEntity user)
         {
-            return new GenerateTokenCommandResponse()
+            return new ClaimsIdentity
+            (
+                new GenericIdentity(user.Email!),
+                new[]
                 {
-                    Authenticated = true,
-                    Message = "Success !!!",
-                    AccessToken = token
-                };
+                    new Claim(ClaimTypes.Name, user.Email!),  
+                    new Claim(ClaimTypes.Role, user.Claim!)
+                }
+            );
         }
     }
 }

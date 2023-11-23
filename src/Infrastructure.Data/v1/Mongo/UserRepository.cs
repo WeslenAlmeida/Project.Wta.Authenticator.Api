@@ -1,11 +1,7 @@
 using CrossCutting.Configuration;
 using Domain.Interfaces.v1;
-using Domain.Entities;
 using MongoDB.Driver;
-using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
-using Domain.Commands.v1.GenerateToken;
-using Domain.Security;
+using Domain.Entities.v1;
 
 namespace Infrastructure.Data.v1.Mongo
 {
@@ -20,15 +16,10 @@ namespace Infrastructure.Data.v1.Mongo
 
         }
 
-        public async Task<bool> CheckUser(string email, string password)
+        public async Task<UserEntity> GetUser(string email, string password)
         {
-            _userCollection.InsertOne(new UserEntity(){Id = Guid.NewGuid(), Email = "weslen1202@gmail.com", password = Cryptography.HashMd5("weslen")});
-            var response = await _userCollection.FindAsync(x => x.Email == email && x.password == password);
-
-            if(response is null || !response.Any())
-                return false;
-
-            return true;    
+            var response = await _userCollection.FindAsync(x => x.Email == email && x.Password == password);
+            return response.FirstOrDefault();
         }
     }
 }

@@ -1,6 +1,7 @@
+using Domain.Fixed;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace Domain.Entities 
+namespace Domain.Entities.v1 
 {
     public class UserEntity 
     {
@@ -11,6 +12,9 @@ namespace Domain.Entities
         public string? Email { get; set; }
 
         [BsonElement("password")]
-        public string? password { get; set; }
+        public string? Password { get; set; }
+
+        [BsonElement("claim")]
+        public string? Claim { get; set; }
     }
 }

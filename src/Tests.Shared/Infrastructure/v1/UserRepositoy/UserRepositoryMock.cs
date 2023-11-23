@@ -12,15 +12,14 @@ namespace Tests.Shared.Infrastructure.v1.UserRepositoy
         [SetUp]
         public IUserRepository SetUpSuccess()
         {
-            mock.CheckUser("teste", "teste").ReturnsForAnyArgs(true);
+            mock.GetUser("teste@teste.com", "Teste123*").ReturnsForAnyArgs(Task.CompletedTask);
             return mock;
         }
 
         [SetUp]
         public IUserRepository SetUpFailed()
         {
-            mock.CheckUser("teste", "teste").ReturnsForAnyArgs(false);
-            return mock;    
+            return null!;    
         }
     }
 }

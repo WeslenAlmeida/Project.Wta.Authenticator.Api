@@ -1,9 +1,9 @@
-using Domain.Entities;
+using Domain.Entities.v1;
 
 namespace Domain.Interfaces.v1
 {
     public interface IUserRepository
     {
-        public Task<bool> CheckUser (string email, string password);
+        Task<UserEntity> GetUser (string email, string password);
     }
 }

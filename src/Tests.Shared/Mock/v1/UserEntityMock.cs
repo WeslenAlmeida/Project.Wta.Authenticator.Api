@@ -1,4 +1,4 @@
-using Domain.Entities;
+using Domain.Entities.v1;
 
 namespace Tests.Shared.Mock.v1
 {
